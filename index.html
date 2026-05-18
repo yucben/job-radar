@@ -28,9 +28,14 @@
   <!-- Filter Panel -->
   <aside class="filter-panel" id="filterPanel">
     <div class="filter-header">
-      <h2>筛选条件</h2>
-      <button class="btn-reset" onclick="resetFilters()">重置全部</button>
+      <h2>🔍 筛选条件</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="filter-active-count" id="filterActiveCount" style="display:none"></span>
+        <button class="btn-reset" onclick="resetFilters()">重置</button>
+        <button class="btn-toggle-panel" onclick="togglePanel()" id="btnTogglePanel" title="收起筛选">▲ 收起</button>
+      </div>
     </div>
+    <div class="filter-body" id="filterBody">
 
     <!-- Industry -->
     <div class="filter-group">
@@ -87,6 +92,7 @@
              placeholder="输入公司名称..."
              oninput="applyFilters()">
     </div>
+    </div><!-- /filter-body -->
   </aside>
 
   <!-- Results -->
