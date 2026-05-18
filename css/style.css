@@ -86,8 +86,13 @@ body {
 .filter-group:last-child { margin-bottom: 0; }
 .filter-label {
   font-size: .85rem; font-weight: 600; color: var(--text-secondary);
-  display: block; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 4px; margin-bottom: 6px;
+  cursor: pointer; user-select: none; padding: 4px 0;
 }
+.filter-label:hover { color: var(--primary); }
+.filter-label .arrow { font-size: .7rem; transition: transform .2s; }
+.filter-group.collapsed .filter-chips { display: none; }
+.filter-group.collapsed .arrow { color: var(--text-muted); }
 .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .filter-chip {
   padding: 4px 12px; border-radius: 16px; font-size: .8rem;
@@ -208,6 +213,13 @@ body {
   text-decoration: none; font-weight: 600; font-size: .9rem;
 }
 .modal-link:hover { opacity: .9; }
+.warn-link {
+  display: inline-block; padding: 6px 14px; background: #fff;
+  border: 1px solid #fca5a5; border-radius: 6px; color: #dc2626;
+  text-decoration: none; font-size: .85rem; font-weight: 600;
+  transition: var(--transition);
+}
+.warn-link:hover { background: #fef2f2; border-color: #f87171; }
 
 /* Empty State */
 .empty-state { text-align: center; padding: 60px 20px; color: var(--text-muted); }
