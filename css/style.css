@@ -105,6 +105,9 @@ body {
   background: var(--primary); color: #fff; border-color: var(--primary);
   font-weight: 600;
 }
+.filter-chip.neutral {
+  background: #f1f5f9; color: var(--text-muted); border-color: #e2e8f0;
+}
 .search-input {
   width: 100%; padding: 8px 14px; border: 1px solid var(--border);
   border-radius: var(--radius); font-size: .9rem; outline: none;
