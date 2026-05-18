@@ -3,6 +3,41 @@
 let activeFilters = {};
 let currentView = 'card';
 let currentSort = 'default';
+let scrollCollapsed = false;
+let userExpandedGroups = new Set();
+
+// ===== Scroll-based auto collapse =====
+let lastScrollY = 0;
+window.addEventListener('scroll', () => {
+  const panel = document.getElementById('filterPanel');
+  if (!panel) return;
+  const rect = panel.getBoundingClientRect();
+  const currentScroll = window.scrollY;
+  
+  // When filter panel scrolls out of view (scrolled past it), collapse all groups
+  if (rect.bottom < 0 && currentScroll > lastScrollY && !scrollCollapsed) {
+    scrollCollapsed = true;
+    document.querySelectorAll('.filter-group').forEach(g => {
+      if (!g.classList.contains('collapsed')) {
+        g.dataset.wasOpen = 'true';
+      }
+      g.classList.add('collapsed');
+      g.querySelector('.arrow').textContent = '▸';
+    });
+  }
+  // When scrolling back to top, restore previously open groups
+  if (currentScroll < 100 && scrollCollapsed) {
+    scrollCollapsed = false;
+    document.querySelectorAll('.filter-group').forEach(g => {
+      if (g.dataset.wasOpen === 'true') {
+        g.classList.remove('collapsed');
+        g.querySelector('.arrow').textContent = '▾';
+        delete g.dataset.wasOpen;
+      }
+    });
+  }
+  lastScrollY = currentScroll;
+}, { passive: true });
 
 // ===== Toggle Filter Group Collapse =====
 function toggleGroup(label) {
@@ -35,12 +70,17 @@ function renderFilterChips() {
 
 // ===== Toggle Filter =====
 function toggleFilter(key, value) {
+  if (value === '不限') {
+    // "不限" acts as clear — remove this filter group entirely
+    delete activeFilters[key];
+    updateChipUI();
+    applyFilters();
+    return;
+  }
+  
   if (!activeFilters[key]) activeFilters[key] = [];
   
-  if (value === '不限') {
-    // "不限" clears this filter
-    delete activeFilters[key];
-  } else if (activeFilters[key].includes(value)) {
+  if (activeFilters[key].includes(value)) {
     // Remove if already active
     activeFilters[key] = activeFilters[key].filter(v => v !== value);
     if (activeFilters[key].length === 0) delete activeFilters[key];
@@ -59,7 +99,8 @@ function updateChipUI() {
     const filterKey = chip.dataset.filter;
     const filterVal = chip.dataset.value;
     if (filterVal === '不限') {
-      chip.classList.toggle('active', !activeFilters[filterKey]);
+      // "不限" is NEVER highlighted — it's the default/clear state
+      chip.classList.remove('active');
     } else {
       chip.classList.toggle('active', activeFilters[filterKey]?.includes(filterVal));
     }
@@ -120,6 +161,7 @@ function applyFilters() {
           if (v === '否') return c.hiring === false;
         })) return false;
       }
+      if (key === 'recruitment' && !values.some(v => v === c.recruitment)) return false;
     }
     return true;
   });
@@ -188,6 +230,7 @@ function renderResults(companies) {
           <span class="tag">${c.industry}</span>
           <span class="tag tag-success">${c.funding}</span>
           ${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join('')}
+          ${c.recruitment === '校招' ? '<span class="tag" style="background:#fef3c7;color:#92400e">🎓校招</span>' : ''}
         </div>
         <div class="card-info">📍 ${c.location} · 👥 ${c.employees}</div>
         <div class="card-info"><strong>投资人:</strong> ${c.investors}</div>
@@ -251,6 +294,7 @@ function showDetail(id) {
         <div class="modal-meta-item"><span class="label">规模</span><span class="value">${c.employees}</span></div>
         <div class="modal-meta-item"><span class="label">成立</span><span class="value">${c.year}年</span></div>
         <div class="modal-meta-item"><span class="label">优势</span><span class="value">${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join(' ') || '—'}</span></div>
+        <div class="modal-meta-item"><span class="label">招聘</span><span class="value"><span class="tag tag-success">${c.recruitment}</span></span></div>
       </div>
     </div>
     
