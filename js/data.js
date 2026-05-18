@@ -451,6 +451,460 @@ const COMPANIES = [
       { title: "Java后端开发", salary: "18-30K", exp: "2-5年" },
       { title: "算法工程师", salary: "25-40K", exp: "2-5年" }
     ]
+  },
+
+  // ===== 第二批：更多隐形好公司 =====
+
+  // ===== 先进制造 =====
+  {
+    id: 21,
+    name: "优必选 (UBTECH)",
+    industry: "先进制造",
+    funding: "已上市",
+    year: 2012,
+    advantage: ["独角兽","高新技术企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "人形机器人第一股（港股上市），Walker系列人形机器人全球领先。教育/物流/康养多场景落地，研发团队超千人。",
+    fundingAmt: "港股IPO",
+    investors: "腾讯、启明创投、科大讯飞",
+    employees: "2000+",
+    website: "https://www.ubtrobot.com",
+    jobs: [
+      { title: "运动控制算法工程师", salary: "35-60K", exp: "3-5年" },
+      { title: "SLAM算法工程师", salary: "30-55K", exp: "2-5年" },
+      { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年" }
+    ]
+  },
+  {
+    id: 22,
+    name: "节卡机器人 (JAKA)",
+    industry: "先进制造",
+    funding: "D轮",
+    year: 2014,
+    advantage: ["专精特新小巨人","独角兽"],
+    location: "上海市",
+    media: true,
+    hiring: true,
+    desc: "协作机器人龙头，已获丰田、比亚迪等头部客户。全球协作机器人出货量前三，柔性制造场景王者。",
+    fundingAmt: "超10亿人民币",
+    investors: "淡马锡、软银愿景基金、比亚迪",
+    employees: "500-1000人",
+    website: "https://www.jakarobotics.com",
+    jobs: [
+      { title: "机器人控制算法", salary: "35-55K", exp: "3-5年" },
+      { title: "C++开发工程师", salary: "28-45K", exp: "3-5年" },
+      { title: "海外技术支持", salary: "20-35K", exp: "2-5年" }
+    ]
+  },
+
+  // ===== 医疗健康 =====
+  {
+    id: 23,
+    name: "晶泰科技 (XtalPi)",
+    industry: "医疗健康",
+    funding: "D轮",
+    year: 2015,
+    advantage: ["独角兽","高新技术企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "AI 药物研发头部玩家，量子物理+AI+云计算驱动新药发现。与辉瑞等国际药企合作，技术壁垒极高。",
+    fundingAmt: "超7亿美元",
+    investors: "红杉中国、腾讯、谷歌、软银",
+    employees: "1000+",
+    website: "https://www.xtalpi.com",
+    jobs: [
+      { title: "计算化学研究员", salary: "40-70K", exp: "博士" },
+      { title: "AI算法工程师", salary: "35-60K", exp: "3-5年" },
+      { title: "Python后端开发", salary: "28-48K", exp: "3-5年" }
+    ]
+  },
+  {
+    id: 24,
+    name: "数坤科技 (Shukun)",
+    industry: "医疗健康",
+    funding: "C+轮",
+    year: 2017,
+    advantage: ["专精特新","高新技术企业"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "AI 辅助诊断冠脉/头颈/胸部疾病，已获 NMPA 多张三类证。覆盖全国 2000+ 医院，心脑血管 AI 赛道第一。",
+    fundingAmt: "数亿元人民币",
+    investors: "红杉中国、华盖资本、远毅资本",
+    employees: "300-500人",
+    website: "https://www.shukun.net",
+    jobs: [
+      { title: "医学图像算法", salary: "30-50K", exp: "2-5年" },
+      { title: "Java后端开发", salary: "25-40K", exp: "3-5年" },
+      { title: "产品经理", salary: "22-38K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 企业服务 =====
+  {
+    id: 25,
+    name: "ONES",
+    industry: "企业服务",
+    funding: "C轮",
+    year: 2015,
+    advantage: ["高新技术企业","瞪羚企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "企业级研发管理工具（对标 Jira），已服务小米、浪潮、招商局等。国内研发管理 SaaS 领军， Atlassian 中国替代首选。",
+    fundingAmt: "超1亿美元",
+    investors: "XVC、顺为资本、源码资本",
+    employees: "300-500人",
+    website: "https://ones.ai",
+    jobs: [
+      { title: "前端架构师", salary: "35-55K", exp: "5-10年" },
+      { title: "Go后端开发", salary: "30-50K", exp: "3-5年" },
+      { title: "产品经理", salary: "28-45K", exp: "3-5年" }
+    ]
+  },
+  {
+    id: 26,
+    name: "分贝通 (Fenbeitong)",
+    industry: "企业服务",
+    funding: "C+轮",
+    year: 2016,
+    advantage: ["瞪羚企业","高新技术企业"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "企业支出管理平台，整合商旅/采购/费控/支付。已服务数千家中大型企业，新一代企业支付赛道头部。",
+    fundingAmt: "超10亿人民币",
+    investors: "高瓴创投、腾讯、IDG资本",
+    employees: "500-1000人",
+    website: "https://www.fenbeitong.com",
+    jobs: [
+      { title: "Java架构师", salary: "35-55K", exp: "5-10年" },
+      { title: "前端开发", salary: "25-42K", exp: "3-5年" },
+      { title: "测试开发", salary: "22-38K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 通信/半导体 =====
+  {
+    id: 27,
+    name: "长鑫存储 (CXMT)",
+    industry: "通信/半导体",
+    funding: "战略融资",
+    year: 2016,
+    advantage: ["独角兽","高新技术企业"],
+    location: "安徽省",
+    media: true,
+    hiring: true,
+    desc: "中国唯一量产 DRAM 的 IDM 企业。国产存储芯片突破者，国家大基金重注，半导体国产替代核心标的。",
+    fundingAmt: "超300亿人民币",
+    investors: "大基金二期、合肥产投、兆易创新",
+    employees: "5000+",
+    website: "https://www.cxmt.com",
+    jobs: [
+      { title: "IC设计工程师", salary: "40-70K", exp: "3-5年" },
+      { title: "工艺整合工程师", salary: "30-50K", exp: "3-5年" },
+      { title: "设备工程师", salary: "20-35K", exp: "2-5年" }
+    ]
+  },
+  {
+    id: 28,
+    name: "瀚博半导体 (Vastai)",
+    industry: "通信/半导体",
+    funding: "B+轮",
+    year: 2020,
+    advantage: ["专精特新"],
+    location: "上海市",
+    media: false,
+    hiring: true,
+    desc: "高性能 AI 推理芯片，自研通用 GPU 架构。创始人来自 AMD 全球副总裁，芯片已量产落地。国产 GPU 替代潜力股。",
+    fundingAmt: "数亿元人民币",
+    investors: "经纬创投、红点中国、五源资本",
+    employees: "200-500人",
+    website: "https://www.vastaitech.com",
+    jobs: [
+      { title: "GPU架构工程师", salary: "50-80K", exp: "5-10年" },
+      { title: "AI编译器开发", salary: "40-65K", exp: "3-5年" },
+      { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 文化娱乐 =====
+  {
+    id: 29,
+    name: "原力动画 (Original Force)",
+    industry: "文化娱乐",
+    funding: "战略融资",
+    year: 2010,
+    advantage: ["高新技术企业"],
+    location: "江苏省",
+    media: false,
+    hiring: true,
+    desc: "国内顶级 3D 动画制作公司，参与《凡人修仙传》《遮天》等顶级国漫制作。与 Netflix、腾讯视频深度合作，动画工业化标杆。",
+    fundingAmt: "数亿元人民币",
+    investors: "腾讯、B站、乐游资本",
+    employees: "500-1000人",
+    website: "https://www.of3d.com",
+    jobs: [
+      { title: "UE5引擎开发", salary: "25-40K", exp: "2-5年" },
+      { title: "3D动画师", salary: "18-30K", exp: "1-3年" },
+      { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 教育 =====
+  {
+    id: 30,
+    name: "火花思维 (Spark Education)",
+    industry: "教育",
+    funding: "E轮",
+    year: 2017,
+    advantage: ["独角兽"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "在线素质教育平台，数理思维赛道头号玩家。双减后转型素质教育成功，海外业务增速迅猛。",
+    fundingAmt: "超5亿美元",
+    investors: "红杉中国、KKR、GGV、快手",
+    employees: "3000+",
+    website: "https://www.huohua.cn",
+    jobs: [
+      { title: "后端架构师", salary: "35-55K", exp: "5-10年" },
+      { title: "数据工程师", salary: "28-48K", exp: "3-5年" },
+      { title: "AI课程设计师", salary: "20-35K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 消费电商 =====
+  {
+    id: 31,
+    name: "徕芬 (Laifen)",
+    industry: "消费电商",
+    funding: "B轮",
+    year: 2019,
+    advantage: ["瞪羚企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "高速吹风机/电动牙刷新国货，用技术降维打击戴森。年营收超 20 亿，产品力极强，出海势头凶猛。",
+    fundingAmt: "数亿元人民币",
+    investors: "大钲资本、顺为资本",
+    employees: "500-1000人",
+    website: "https://www.laifentech.com",
+    jobs: [
+      { title: "嵌入式开发", salary: "28-45K", exp: "3-5年" },
+      { title: "电商运营总监", salary: "30-50K", exp: "5-10年" },
+      { title: "工业设计", salary: "22-38K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 能源环保 =====
+  {
+    id: 32,
+    name: "蜂巢能源 (SVOLT)",
+    industry: "能源环保",
+    funding: "Pre-IPO",
+    year: 2018,
+    advantage: ["独角兽","高新技术企业"],
+    location: "江苏省",
+    media: true,
+    hiring: true,
+    desc: "长城汽车孵化，动力电池 Top 10。短刀电池技术路线独树一帜，已建多个百GWh基地，科创板冲刺中。",
+    fundingAmt: "超200亿人民币",
+    investors: "IDG资本、国家绿色发展基金、碧桂园创投",
+    employees: "10000+",
+    website: "https://www.svolt.cn",
+    jobs: [
+      { title: "电池研发工程师", salary: "25-45K", exp: "2-5年" },
+      { title: "工艺工程师", salary: "18-30K", exp: "1-3年" },
+      { title: "MES开发工程师", salary: "20-35K", exp: "2-5年" }
+    ]
+  },
+
+  // ===== 金融 =====
+  {
+    id: 33,
+    name: "同盾科技 (Tongdun)",
+    industry: "金融",
+    funding: "D轮",
+    year: 2013,
+    advantage: ["专精特新","高新技术企业"],
+    location: "浙江省",
+    media: true,
+    hiring: true,
+    desc: "智能风控与决策分析，服务超万家金融机构和企业。从反欺诈到信用评估，金融科技基础设施级公司。",
+    fundingAmt: "超20亿人民币",
+    investors: "中投公司、招商局资本、宽带资本",
+    employees: "1000-2000人",
+    website: "https://www.tongdun.cn",
+    jobs: [
+      { title: "风控算法工程师", salary: "30-50K", exp: "3-5年" },
+      { title: "Java开发", salary: "25-42K", exp: "3-5年" },
+      { title: "数据分析师", salary: "20-35K", exp: "2-5年" }
+    ]
+  },
+
+  // ===== 汽车出行 =====
+  {
+    id: 34,
+    name: "经纬恒润 (HiRain)",
+    industry: "汽车出行",
+    funding: "已上市",
+    year: 2003,
+    advantage: ["高新技术企业"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "汽车电子龙头，ADAS/智能驾驶域控制器头部供应商。服务国内外主流车企，智能汽车 Tier1 国产替代标杆。",
+    fundingAmt: "科创板上市",
+    investors: "一汽、上汽、广汽",
+    employees: "5000+",
+    website: "https://www.hirain.com",
+    jobs: [
+      { title: "自动驾驶算法", salary: "35-60K", exp: "3-5年" },
+      { title: "嵌入式开发", salary: "25-42K", exp: "2-5年" },
+      { title: "系统工程师", salary: "22-38K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 广告营销 =====
+  {
+    id: 35,
+    name: "特赞 (Tezign)",
+    industry: "广告营销",
+    funding: "D轮",
+    year: 2015,
+    advantage: ["高新技术企业","瞪羚企业"],
+    location: "上海市",
+    media: true,
+    hiring: true,
+    desc: "内容科技独角兽，用 AI 管理品牌内容资产。服务阿里、联合利华等 200+ 品牌，Martech 赛道头部。",
+    fundingAmt: "超10亿人民币",
+    investors: "淡马锡、红杉中国、赫斯特资本",
+    employees: "300-500人",
+    website: "https://www.tezign.com",
+    jobs: [
+      { title: "AI算法工程师", salary: "35-55K", exp: "3-5年" },
+      { title: "前端开发", salary: "25-42K", exp: "3-5年" },
+      { title: "产品经理", salary: "25-40K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 物联网/硬件 =====
+  {
+    id: 36,
+    name: "绿米联创 (Aqara)",
+    industry: "物联网/硬件",
+    funding: "C+轮",
+    year: 2009,
+    advantage: ["专精特新","高新技术企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "全屋智能家居龙头，小米生态链标杆企业。Zigbee/Thread/Matter 多协议，产品销往 190+ 国家。",
+    fundingAmt: "超10亿人民币",
+    investors: "顺为资本、凯辉基金、远翼投资",
+    employees: "1000+",
+    website: "https://www.aqara.com",
+    jobs: [
+      { title: "嵌入式开发", salary: "25-40K", exp: "3-5年" },
+      { title: "IoT平台开发", salary: "28-45K", exp: "3-5年" },
+      { title: "海外产品经理", salary: "22-38K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 物流 =====
+  {
+    id: 37,
+    name: "极智嘉 (Geek+)",
+    industry: "物流",
+    funding: "E轮",
+    year: 2015,
+    advantage: ["独角兽","专精特新小巨人"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "全球 AMR 自主移动机器人市占率第一。仓储物流机器人出货超万台，海外营收占比超 50%。",
+    fundingAmt: "超8亿美元",
+    investors: "GGV、华平投资、英特尔资本",
+    employees: "1500+",
+    website: "https://www.geekplus.com",
+    jobs: [
+      { title: "路径规划算法", salary: "35-60K", exp: "3-5年" },
+      { title: "C++开发", salary: "28-48K", exp: "3-5年" },
+      { title: "海外项目经理", salary: "25-40K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 区块链 =====
+  {
+    id: 38,
+    name: "比特大陆 (Bitmain)",
+    industry: "区块链",
+    funding: "战略融资",
+    year: 2013,
+    advantage: ["独角兽","高新技术企业"],
+    location: "北京市",
+    media: true,
+    hiring: true,
+    desc: "全球最大加密货币矿机厂商，ASIC 芯片设计能力全球顶级。旗下蚂蚁矿机市占率超 70%，AI 芯片新方向拓展中。",
+    fundingAmt: "超10亿美元",
+    investors: "红杉中国、IDG资本、GIC",
+    employees: "1000+",
+    website: "https://www.bitmain.com",
+    jobs: [
+      { title: "芯片设计工程师", salary: "45-75K", exp: "3-5年" },
+      { title: "AI编译器开发", salary: "35-60K", exp: "3-5年" },
+      { title: "全栈工程师", salary: "30-50K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 传统制造（高端化） =====
+  {
+    id: 39,
+    name: "思谋科技 (SmartMore)",
+    industry: "传统制造",
+    funding: "B+轮",
+    year: 2019,
+    advantage: ["独角兽","高新技术企业"],
+    location: "广东省",
+    media: true,
+    hiring: true,
+    desc: "AI 视觉赋能智能制造，贾佳亚教授（原腾讯优图）创立。已落地 1000+ 工业视觉场景，精密制造 AI 检测王者。",
+    fundingAmt: "超3亿美元",
+    investors: "IDG资本、联想创投、基石资本",
+    employees: "500-1000人",
+    website: "https://www.smartmore.com",
+    jobs: [
+      { title: "计算机视觉算法", salary: "40-65K", exp: "3-5年" },
+      { title: "C++开发工程师", salary: "30-50K", exp: "3-5年" },
+      { title: "解决方案架构师", salary: "28-45K", exp: "3-5年" }
+    ]
+  },
+
+  // ===== 文化娱乐（二次元） =====
+  {
+    id: 40,
+    name: "叠纸游戏 (Papergames)",
+    industry: "文化娱乐",
+    funding: "战略融资",
+    year: 2013,
+    advantage: ["独角兽"],
+    location: "上海市",
+    media: true,
+    hiring: true,
+    desc: "女性向游戏绝对王者，《恋与制作人》《闪耀暖暖》等现象级产品。研发实力强，IP 衍生品和海外市场表现优异。",
+    fundingAmt: "数亿美元",
+    investors: "腾讯、字节跳动（已退出）",
+    employees: "1000-2000人",
+    website: "https://www.papegames.com",
+    jobs: [
+      { title: "Unity开发", salary: "28-48K", exp: "3-5年" },
+      { title: "游戏服务器开发", salary: "28-45K", exp: "3-5年" },
+      { title: "3D角色美术", salary: "22-38K", exp: "3-5年" }
+    ]
   }
 ];
 
