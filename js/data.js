@@ -24,10 +24,13 @@ const COMPANIES = [
     benefits: ["六险一金", "弹性工作", "期权激励", "免费三餐"],
     website: "https://www.moonshot.cn",
     jobs: [
-      { title: "大模型算法工程师", salary: "50-100K", exp: "3-5年" },
-      { title: "后端开发工程师", salary: "35-60K", exp: "3-5年" },
-      { title: "产品经理 (AI方向)", salary: "30-50K", exp: "3-5年" }
+      { title: "大模型算法工程师", salary: "50-100K", exp: "3-5年", degree: "本科" },
+      { title: "后端开发工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "产品经理 (AI方向)", salary: "30-50K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品运营", salary: "25-40K", exp: "2-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "测试开发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 2,
@@ -50,10 +53,13 @@ const COMPANIES = [
     benefits: ["六险一金", "年终奖", "论文发表支持", "北京户口指标"],
     website: "https://www.zhipuai.cn",
     jobs: [
-      { title: "NLP算法研究员", salary: "40-80K", exp: "1-3年" },
-      { title: "前端开发工程师", salary: "25-45K", exp: "1-3年" },
-      { title: "AI应用开发工程师", salary: "30-55K", exp: "2-5年" }
+      { title: "NLP算法研究员", salary: "40-80K", exp: "1-3年", degree: "本科" },
+      { title: "前端开发工程师", salary: "25-45K", exp: "1-3年", degree: "本科" },
+      { title: "AI应用开发工程师", salary: "30-55K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "AI产品经理", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "后端开发(Go)", salary: "28-48K", exp: "2-5年", degree: "本科" },
+      { title: "深度学习研究员", salary: "45-85K", exp: "博士", degree: "博士" },
   },
 
   // ===== 企业服务 =====
@@ -78,10 +84,13 @@ const COMPANIES = [
     benefits: ["六险一金", "弹性工作", "MacBook Pro", "年度旅游"],
     website: "https://lanhuapp.com",
     jobs: [
-      { title: "前端架构师", salary: "40-60K", exp: "5-10年" },
-      { title: "产品经理", salary: "28-45K", exp: "3-5年" },
-      { title: "后端开发 (Go)", salary: "30-50K", exp: "2-5年" }
+      { title: "前端架构师", salary: "40-60K", exp: "5-10年", degree: "本科" },
+      { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "后端开发 (Go)", salary: "30-50K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "UI/UX设计师", salary: "22-38K", exp: "2-5年", degree: "本科" },
+      { title: "后端开发(Node.js)", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "测试工程师", salary: "20-35K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 4,
@@ -104,10 +113,13 @@ const COMPANIES = [
     benefits: ["五险一金", "远程办公", "技术书籍报销"],
     website: "https://www.showmebug.com",
     jobs: [
-      { title: "全栈工程师", salary: "25-40K", exp: "3-5年" },
-      { title: "技术销售", salary: "20-35K", exp: "2-5年" },
-      { title: "测试开发", salary: "20-35K", exp: "2-5年" }
+      { title: "全栈工程师", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "技术销售", salary: "20-35K", exp: "2-5年", degree: "本科" },
+      { title: "测试开发", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发(React)", salary: "22-38K", exp: "2-5年", degree: "本科" },
+      { title: "运维工程师", salary: "20-35K", exp: "2-5年", degree: "大专" },
   },
 
   // ===== 医疗健康 =====
@@ -132,10 +144,13 @@ const COMPANIES = [
     benefits: ["六险一金", "人才公寓", "专利奖金"],
     website: "https://www.deepwise.com",
     jobs: [
-      { title: "医学图像算法工程师", salary: "35-60K", exp: "2-5年" },
-      { title: "Java后端开发", salary: "25-40K", exp: "3-5年" },
-      { title: "临床产品经理", salary: "25-40K", exp: "3-5年" }
+      { title: "医学图像算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
+      { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "临床产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "Java后端开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发", salary: "22-38K", exp: "2-5年", degree: "本科" },
+      { title: "临床数据分析师", salary: "20-35K", exp: "1-3年", degree: "本科" },
   },
 
   // ===== 消费电商 =====
@@ -160,10 +175,12 @@ const COMPANIES = [
     benefits: ["五险一金", "员工内购", "年终分红"],
     website: "https://www.yuanfang.com",
     jobs: [
-      { title: "运营总监", salary: "25-40K", exp: "5-10年" },
-      { title: "前端开发", salary: "18-30K", exp: "1-3年" },
-      { title: "内容运营", salary: "12-20K", exp: "1-3年" }
+      { title: "运营总监", salary: "25-40K", exp: "5-10年", degree: "本科" },
+      { title: "前端开发", salary: "18-30K", exp: "1-3年", degree: "本科" },
+      { title: "内容运营", salary: "12-20K", exp: "1-3年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 先进制造 =====
@@ -188,10 +205,12 @@ const COMPANIES = [
     benefits: ["六险一金", "海外轮岗", "技术专利奖", "股权激励"],
     website: "https://www.mech-mind.com",
     jobs: [
-      { title: "3D视觉算法工程师", salary: "40-70K", exp: "2-5年" },
-      { title: "ROS开发工程师", salary: "30-50K", exp: "2-5年" },
-      { title: "海外销售经理", salary: "25-45K", exp: "3-5年" }
+      { title: "3D视觉算法工程师", salary: "40-70K", exp: "2-5年", degree: "本科" },
+      { title: "ROS开发工程师", salary: "30-50K", exp: "2-5年", degree: "本科" },
+      { title: "海外销售经理", salary: "25-45K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 教育 =====
@@ -216,10 +235,12 @@ const COMPANIES = [
     benefits: ["五险一金", "年终1-4月", "技术大会报销"],
     website: "https://www.xiaoe-tech.com",
     jobs: [
-      { title: "高级Java开发", salary: "30-45K", exp: "5-10年" },
-      { title: "前端开发", salary: "22-38K", exp: "3-5年" },
-      { title: "客户成功经理", salary: "18-28K", exp: "2-5年" }
+      { title: "高级Java开发", salary: "30-45K", exp: "5-10年", degree: "本科" },
+      { title: "前端开发", salary: "22-38K", exp: "3-5年", degree: "本科" },
+      { title: "客户成功经理", salary: "18-28K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 跨境出海 =====
@@ -244,10 +265,12 @@ const COMPANIES = [
     benefits: ["六险一金", "海外出差", "弹性工作", "英语培训"],
     website: "https://www.shoplazza.com",
     jobs: [
-      { title: "前端架构师 (React)", salary: "35-55K", exp: "5-10年" },
-      { title: "后端开发 (Node.js/Go)", salary: "28-45K", exp: "3-5年" },
-      { title: "SEO/增长运营", salary: "20-35K", exp: "3-5年" }
+      { title: "前端架构师 (React)", salary: "35-55K", exp: "5-10年", degree: "本科" },
+      { title: "后端开发 (Node.js/Go)", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "SEO/增长运营", salary: "20-35K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 体育游戏 =====
@@ -272,10 +295,12 @@ const COMPANIES = [
     benefits: ["六险一金", "16薪", "项目分红", "免费猫粮（公司有猫）"],
     website: "https://www.hypergryph.com",
     jobs: [
-      { title: "游戏服务器开发", salary: "30-50K", exp: "3-5年" },
-      { title: "Unity客户端开发", salary: "28-48K", exp: "3-5年" },
-      { title: "技术美术 (TA)", salary: "30-55K", exp: "3-5年" }
+      { title: "游戏服务器开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "Unity客户端开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "技术美术 (TA)", salary: "30-55K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 智能硬件 =====
@@ -300,10 +325,12 @@ const COMPANIES = [
     benefits: ["六险一金", "人才公寓", "海外轮岗", "产品内购"],
     website: "https://www.dreame.com",
     jobs: [
-      { title: "嵌入式开发工程师", salary: "28-45K", exp: "3-5年" },
-      { title: "SLAM算法工程师", salary: "35-60K", exp: "2-5年" },
-      { title: "海外电商运营", salary: "20-35K", exp: "2-5年" }
+      { title: "嵌入式开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "SLAM算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
+      { title: "海外电商运营", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 金融 =====
@@ -328,10 +355,12 @@ const COMPANIES = [
     benefits: ["六险一金", "弹性工作", "补充公积金", "期权"],
     website: "https://www.xtransfer.com",
     jobs: [
-      { title: "Java架构师", salary: "40-65K", exp: "5-10年" },
-      { title: "风控算法工程师", salary: "35-55K", exp: "3-5年" },
-      { title: "前端开发", salary: "25-42K", exp: "3-5年" }
+      { title: "Java架构师", salary: "40-65K", exp: "5-10年", degree: "本科" },
+      { title: "风控算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 本地生活 =====
@@ -356,10 +385,12 @@ const COMPANIES = [
     benefits: ["五险一金", "餐补", "内部员工折扣"],
     website: "https://www.guoquan.com",
     jobs: [
-      { title: "供应链产品经理", salary: "25-40K", exp: "3-5年" },
-      { title: "数据开发工程师", salary: "28-45K", exp: "3-5年" },
-      { title: "区域运营经理", salary: "20-35K", exp: "3-5年" }
+      { title: "供应链产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "数据开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "区域运营经理", salary: "20-35K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 汽车出行 =====
@@ -384,10 +415,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "海外轮岗", "博士优先落户"],
     website: "https://www.hesaitech.com",
     jobs: [
-      { title: "光学工程师", salary: "30-50K", exp: "3-5年" },
-      { title: "嵌入式软件工程师", salary: "28-48K", exp: "3-5年" },
-      { title: "FPGA开发工程师", salary: "35-55K", exp: "3-5年" }
+      { title: "光学工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "嵌入式软件工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "FPGA开发工程师", salary: "35-55K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 通信/半导体 =====
@@ -412,10 +445,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "顶级实验室", "论文发表"],
     website: "https://www.cixtech.com",
     jobs: [
-      { title: "SoC设计工程师", salary: "40-70K", exp: "3-5年" },
-      { title: "芯片验证工程师", salary: "35-60K", exp: "3-5年" },
-      { title: "Linux内核工程师", salary: "30-50K", exp: "3-5年" }
+      { title: "SoC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
+      { title: "芯片验证工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "Linux内核工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 工具软件 =====
@@ -464,10 +499,12 @@ const COMPANIES = [
     benefits: ["五险一金", "员工宿舍", "餐补", "班车"],
     website: "https://www.astronergy.com",
     jobs: [
-      { title: "工艺工程师", salary: "15-25K", exp: "1-3年" },
-      { title: "海外销售经理", salary: "20-35K", exp: "3-5年" },
-      { title: "设备工程师", salary: "12-22K", exp: "1-3年" }
+      { title: "工艺工程师", salary: "15-25K", exp: "1-3年", degree: "本科" },
+      { title: "海外销售经理", salary: "20-35K", exp: "3-5年", degree: "本科" },
+      { title: "设备工程师", salary: "12-22K", exp: "1-3年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 社交网络 =====
@@ -492,10 +529,12 @@ const COMPANIES = [
     benefits: ["六险一金", "16薪", "免费三餐", "健身房"],
     website: "https://www.soulapp.cn",
     jobs: [
-      { title: "推荐算法工程师", salary: "35-60K", exp: "3-5年" },
-      { title: "Android开发", salary: "28-48K", exp: "3-5年" },
-      { title: "数据分析师", salary: "20-38K", exp: "2-5年" }
+      { title: "推荐算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "Android开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "数据分析师", salary: "20-38K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 物联网/硬件 =====
@@ -520,10 +559,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票", "海外轮岗", "技术大会"],
     website: "https://www.tuya.com",
     jobs: [
-      { title: "嵌入式开发", salary: "25-42K", exp: "3-5年" },
-      { title: "Java后端架构师", salary: "35-55K", exp: "5-10年" },
-      { title: "海外产品经理", salary: "25-40K", exp: "3-5年" }
+      { title: "嵌入式开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "Java后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
+      { title: "海外产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 物流 =====
@@ -548,9 +589,11 @@ const COMPANIES = [
     benefits: ["五险一金", "弹性工作"],
     website: "https://www.xiangxin.tech",
     jobs: [
-      { title: "Java后端开发", salary: "18-30K", exp: "2-5年" },
-      { title: "算法工程师", salary: "25-40K", exp: "2-5年" }
+      { title: "Java后端开发", salary: "18-30K", exp: "2-5年", degree: "本科" },
+      { title: "算法工程师", salary: "25-40K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 第二批：更多隐形好公司 =====
@@ -577,10 +620,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "人才房", "海外展会"],
     website: "https://www.ubtrobot.com",
     jobs: [
-      { title: "运动控制算法工程师", salary: "35-60K", exp: "3-5年" },
-      { title: "SLAM算法工程师", salary: "30-55K", exp: "2-5年" },
-      { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年" }
+      { title: "运动控制算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "SLAM算法工程师", salary: "30-55K", exp: "2-5年", degree: "本科" },
+      { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 22,
@@ -603,10 +648,12 @@ const COMPANIES = [
     benefits: ["六险一金", "项目奖金", "海外培训", "落户支持"],
     website: "https://www.jakarobotics.com",
     jobs: [
-      { title: "机器人控制算法", salary: "35-55K", exp: "3-5年" },
-      { title: "C++开发工程师", salary: "28-45K", exp: "3-5年" },
-      { title: "海外技术支持", salary: "20-35K", exp: "2-5年" }
+      { title: "机器人控制算法", salary: "35-55K", exp: "3-5年", degree: "本科" },
+      { title: "C++开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "海外技术支持", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 医疗健康 =====
@@ -631,10 +678,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "国际会议", "Nature发论文"],
     website: "https://www.xtalpi.com",
     jobs: [
-      { title: "计算化学研究员", salary: "40-70K", exp: "博士" },
-      { title: "AI算法工程师", salary: "35-60K", exp: "3-5年" },
-      { title: "Python后端开发", salary: "28-48K", exp: "3-5年" }
+      { title: "计算化学研究员", salary: "40-70K", exp: "博士", degree: "本科" },
+      { title: "AI算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "Python后端开发", salary: "28-48K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 24,
@@ -657,10 +706,12 @@ const COMPANIES = [
     benefits: ["六险一金", "落户指标", "科研经费", "医学培训"],
     website: "https://www.shukun.net",
     jobs: [
-      { title: "医学图像算法", salary: "30-50K", exp: "2-5年" },
-      { title: "Java后端开发", salary: "25-40K", exp: "3-5年" },
-      { title: "产品经理", salary: "22-38K", exp: "3-5年" }
+      { title: "医学图像算法", salary: "30-50K", exp: "2-5年", degree: "本科" },
+      { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 企业服务 =====
@@ -685,10 +736,12 @@ const COMPANIES = [
     benefits: ["六险一金", "Mac办公", "年度旅游", "技术书籍"],
     website: "https://ones.ai",
     jobs: [
-      { title: "前端架构师", salary: "35-55K", exp: "5-10年" },
-      { title: "Go后端开发", salary: "30-50K", exp: "3-5年" },
-      { title: "产品经理", salary: "28-45K", exp: "3-5年" }
+      { title: "前端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
+      { title: "Go后端开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 26,
@@ -711,10 +764,12 @@ const COMPANIES = [
     benefits: ["六险一金", "补充医疗", "弹性工作", "期权"],
     website: "https://www.fenbeitong.com",
     jobs: [
-      { title: "Java架构师", salary: "35-55K", exp: "5-10年" },
-      { title: "前端开发", salary: "25-42K", exp: "3-5年" },
-      { title: "测试开发", salary: "22-38K", exp: "3-5年" }
+      { title: "Java架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
+      { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "测试开发", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 通信/半导体 =====
@@ -739,10 +794,12 @@ const COMPANIES = [
     benefits: ["六险一金", "人才公寓", "高额公积金", "安家费"],
     website: "https://www.cxmt.com",
     jobs: [
-      { title: "IC设计工程师", salary: "40-70K", exp: "3-5年" },
-      { title: "工艺整合工程师", salary: "30-50K", exp: "3-5年" },
-      { title: "设备工程师", salary: "20-35K", exp: "2-5年" }
+      { title: "IC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
+      { title: "工艺整合工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "设备工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
   {
     id: 28,
@@ -765,10 +822,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "硅谷轮岗", "顶级GPU资源"],
     website: "https://www.vastaitech.com",
     jobs: [
-      { title: "GPU架构工程师", salary: "50-80K", exp: "5-10年" },
-      { title: "AI编译器开发", salary: "40-65K", exp: "3-5年" },
-      { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年" }
+      { title: "GPU架构工程师", salary: "50-80K", exp: "5-10年", degree: "本科" },
+      { title: "AI编译器开发", salary: "40-65K", exp: "3-5年", degree: "本科" },
+      { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 文化娱乐 =====
@@ -793,10 +852,12 @@ const COMPANIES = [
     benefits: ["六险一金", "项目奖金", "创意自由", "行业顶级项目"],
     website: "https://www.of3d.com",
     jobs: [
-      { title: "UE5引擎开发", salary: "25-40K", exp: "2-5年" },
-      { title: "3D动画师", salary: "18-30K", exp: "1-3年" },
-      { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年" }
+      { title: "UE5引擎开发", salary: "25-40K", exp: "2-5年", degree: "本科" },
+      { title: "3D动画师", salary: "18-30K", exp: "1-3年", degree: "本科" },
+      { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 教育 =====
@@ -821,10 +882,12 @@ const COMPANIES = [
     benefits: ["六险一金", "子女免费课程", "弹性工作"],
     website: "https://www.huohua.cn",
     jobs: [
-      { title: "后端架构师", salary: "35-55K", exp: "5-10年" },
-      { title: "数据工程师", salary: "28-48K", exp: "3-5年" },
-      { title: "AI课程设计师", salary: "20-35K", exp: "3-5年" }
+      { title: "后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
+      { title: "数据工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "AI课程设计师", salary: "20-35K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 消费电商 =====
@@ -849,10 +912,12 @@ const COMPANIES = [
     benefits: ["五险一金", "产品内购", "年终分红"],
     website: "https://www.laifentech.com",
     jobs: [
-      { title: "嵌入式开发", salary: "28-45K", exp: "3-5年" },
-      { title: "电商运营总监", salary: "30-50K", exp: "5-10年" },
-      { title: "工业设计", salary: "22-38K", exp: "3-5年" }
+      { title: "嵌入式开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "电商运营总监", salary: "30-50K", exp: "5-10年", degree: "本科" },
+      { title: "工业设计", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 能源环保 =====
@@ -877,10 +942,12 @@ const COMPANIES = [
     benefits: ["六险一金", "人才公寓", "餐补", "班车", "年终奖"],
     website: "https://www.svolt.cn",
     jobs: [
-      { title: "电池研发工程师", salary: "25-45K", exp: "2-5年" },
-      { title: "工艺工程师", salary: "18-30K", exp: "1-3年" },
-      { title: "MES开发工程师", salary: "20-35K", exp: "2-5年" }
+      { title: "电池研发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
+      { title: "工艺工程师", salary: "18-30K", exp: "1-3年", degree: "本科" },
+      { title: "MES开发工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 金融 =====
@@ -905,10 +972,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "技术大会", "论文激励"],
     website: "https://www.tongdun.cn",
     jobs: [
-      { title: "风控算法工程师", salary: "30-50K", exp: "3-5年" },
-      { title: "Java开发", salary: "25-42K", exp: "3-5年" },
-      { title: "数据分析师", salary: "20-35K", exp: "2-5年" }
+      { title: "风控算法工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "Java开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "数据分析师", salary: "20-35K", exp: "2-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 汽车出行 =====
@@ -933,10 +1002,12 @@ const COMPANIES = [
     benefits: ["六险一金", "人才引进落户", "购车优惠", "项目奖金"],
     website: "https://www.hirain.com",
     jobs: [
-      { title: "自动驾驶算法", salary: "35-60K", exp: "3-5年" },
-      { title: "嵌入式开发", salary: "25-42K", exp: "2-5年" },
-      { title: "系统工程师", salary: "22-38K", exp: "3-5年" }
+      { title: "自动驾驶算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "嵌入式开发", salary: "25-42K", exp: "2-5年", degree: "本科" },
+      { title: "系统工程师", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 广告营销 =====
@@ -961,10 +1032,12 @@ const COMPANIES = [
     benefits: ["六险一金", "弹性工作", "创意氛围", "行业峰会"],
     website: "https://www.tezign.com",
     jobs: [
-      { title: "AI算法工程师", salary: "35-55K", exp: "3-5年" },
-      { title: "前端开发", salary: "25-42K", exp: "3-5年" },
-      { title: "产品经理", salary: "25-40K", exp: "3-5年" }
+      { title: "AI算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 物联网/硬件 =====
@@ -989,10 +1062,12 @@ const COMPANIES = [
     benefits: ["六险一金", "智能家居免费体验", "海外机会"],
     website: "https://www.aqara.com",
     jobs: [
-      { title: "嵌入式开发", salary: "25-40K", exp: "3-5年" },
-      { title: "IoT平台开发", salary: "28-45K", exp: "3-5年" },
-      { title: "海外产品经理", salary: "22-38K", exp: "3-5年" }
+      { title: "嵌入式开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
+      { title: "IoT平台开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "海外产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 物流 =====
@@ -1017,10 +1092,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "海外轮岗", "机器人随便玩"],
     website: "https://www.geekplus.com",
     jobs: [
-      { title: "路径规划算法", salary: "35-60K", exp: "3-5年" },
-      { title: "C++开发", salary: "28-48K", exp: "3-5年" },
-      { title: "海外项目经理", salary: "25-40K", exp: "3-5年" }
+      { title: "路径规划算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "C++开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "海外项目经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 区块链 =====
@@ -1045,10 +1122,12 @@ const COMPANIES = [
     benefits: ["六险一金", "项目分红", "顶级芯片工艺", "海外机会"],
     website: "https://www.bitmain.com",
     jobs: [
-      { title: "芯片设计工程师", salary: "45-75K", exp: "3-5年" },
-      { title: "AI编译器开发", salary: "35-60K", exp: "3-5年" },
-      { title: "全栈工程师", salary: "30-50K", exp: "3-5年" }
+      { title: "芯片设计工程师", salary: "45-75K", exp: "3-5年", degree: "本科" },
+      { title: "AI编译器开发", salary: "35-60K", exp: "3-5年", degree: "本科" },
+      { title: "全栈工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 传统制造（高端化） =====
@@ -1073,10 +1152,12 @@ const COMPANIES = [
     benefits: ["六险一金", "股票期权", "顶级CV团队", "论文发表"],
     website: "https://www.smartmore.com",
     jobs: [
-      { title: "计算机视觉算法", salary: "40-65K", exp: "3-5年" },
-      { title: "C++开发工程师", salary: "30-50K", exp: "3-5年" },
-      { title: "解决方案架构师", salary: "28-45K", exp: "3-5年" }
+      { title: "计算机视觉算法", salary: "40-65K", exp: "3-5年", degree: "本科" },
+      { title: "C++开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
+      { title: "解决方案架构师", salary: "28-45K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   },
 
   // ===== 文化娱乐（二次元） =====
@@ -1101,10 +1182,12 @@ const COMPANIES = [
     benefits: ["六险一金", "16薪", "项目分红", "二次元天堂"],
     website: "https://www.papegames.com",
     jobs: [
-      { title: "Unity开发", salary: "28-48K", exp: "3-5年" },
-      { title: "游戏服务器开发", salary: "28-45K", exp: "3-5年" },
-      { title: "3D角色美术", salary: "22-38K", exp: "3-5年" }
+      { title: "Unity开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
+      { title: "游戏服务器开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
+      { title: "3D角色美术", salary: "22-38K", exp: "3-5年", degree: "本科" }
     ]
+      { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
+      { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
   }
 ];
 
@@ -1117,5 +1200,6 @@ const FILTERS = {
   location: ["不限","中国","海外","福建省","广东省","北京市","香港特别行政区","吉林省","天津市","辽宁省","上海市","河北省","江苏省","内蒙古自治区","台湾省","贵州省","宁夏回族自治区","浙江省","安徽省","山东省","黑龙江省","山西省","陕西省","广西壮族自治区","河南省","重庆市","四川省","云南省","澳门特别行政区","湖北省","西藏自治区","甘肃省","海南省","新疆维吾尔自治区","青海省","湖南省","江西省"],
   media: ["不限","是","否"],
   hiring: ["不限","是","否"],
-  recruitment: ["不限","社招","校招"]
+  recruitment: ["不限","社招","校招"],
+  degree: ["不限","大专","本科","硕士","博士"]
 };
