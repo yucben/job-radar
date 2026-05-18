@@ -179,6 +179,14 @@ function applyFilters() {
         })) return false;
       }
       if (key === 'recruitment' && !values.some(v => v === c.recruitment)) return false;
+      if (key === 'degree') {
+        // Degree hierarchy: 大专(1) < 本科(2) < 硕士(3) < 博士(4)
+        const degRank = { '大专': 1, '本科': 2, '硕士': 3, '博士': 4 };
+        if (!values.some(d => {
+          const minRank = degRank[d];
+          return c.jobs.some(j => (degRank[j.degree] || 2) >= minRank);
+        })) return false;
+      }
     }
     return true;
   });
@@ -254,7 +262,7 @@ function renderResults(companies) {
         <div class="card-info"><strong>投资人:</strong> ${c.investors}</div>
         <div class="card-jobs">
           ${c.jobs.slice(0, 3).map(j => 
-            `<span class="job-badge">${j.title} <span class="salary">${j.salary}</span></span>`
+            `<span class="job-badge">${j.title} <span class="salary">${j.salary}</span> · ${j.degree||'本科'}</span>`
           ).join('')}
           ${c.jobs.length > 3 ? `<span class="job-badge" style="background:#f1f5f9;color:#64748b">+${c.jobs.length - 3} 更多</span>` : ''}
           ${c.jobs.length === 0 ? '<span style="font-size:.8rem;color:#94a3b8">暂无在招职位</span>' : ''}
@@ -343,7 +351,7 @@ function showDetail(id) {
         ${c.jobs.map(j => `
           <div class="modal-job-item">
             <div class="job-title">${j.title}</div>
-            <div class="job-meta">💰 ${j.salary} · 📋 ${j.exp}</div>
+            <div class="job-meta">💰 ${j.salary} · 📋 ${j.exp} · 📚 ${j.degree||'本科'}</div>
           </div>
         `).join('')}
       </div>
