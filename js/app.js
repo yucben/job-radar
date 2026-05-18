@@ -4,6 +4,18 @@ let activeFilters = {};
 let currentView = 'card';
 let currentSort = 'default';
 
+// ===== Toggle Filter Group Collapse =====
+function toggleGroup(label) {
+  const group = label.parentElement;
+  const arrow = label.querySelector('.arrow');
+  group.classList.toggle('collapsed');
+  if (group.classList.contains('collapsed')) {
+    arrow.textContent = '▸';
+  } else {
+    arrow.textContent = '▾';
+  }
+}
+
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
   renderFilterChips();
@@ -255,6 +267,17 @@ function showDetail(id) {
       </div>
     </div>
     ` : ''}
+
+    <div class="modal-section" style="background:#fef2f2;border-radius:8px;padding:16px;border:1px solid #fecaca">
+      <h3 style="color:#dc2626">⚠️ 避坑查询 — 搜负面评价</h3>
+      <p style="font-size:.85rem;color:#991b1b;margin-bottom:10px">坏名声通常不是空穴来风。投简历前搜一圈：</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="https://maimai.cn/search?q=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+裁员" target="_blank" class="warn-link" rel="noopener">脉脉</a>
+        <a href="https://www.zhihu.com/search?type=content&q=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+避雷" target="_blank" class="warn-link" rel="noopener">知乎</a>
+        <a href="https://www.nowcoder.com/search?type=post&query=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+坑" target="_blank" class="warn-link" rel="noopener">牛客</a>
+        <a href="https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+避雷" target="_blank" class="warn-link" rel="noopener">小红书</a>
+      </div>
+    </div>
     
     <a href="${c.website}" target="_blank" class="modal-link" rel="noopener">🌐 访问官网</a>
   `;
