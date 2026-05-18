@@ -6,6 +6,20 @@ let currentSort = 'default';
 let scrollCollapsed = false;
 let userExpandedGroups = new Set();
 
+// ===== Toggle entire filter panel =====
+function togglePanel() {
+  const panel = document.getElementById('filterPanel');
+  const btn = document.getElementById('btnTogglePanel');
+  panel.classList.toggle('collapsed');
+  if (panel.classList.contains('collapsed')) {
+    btn.innerHTML = '▼ 展开';
+    btn.title = '展开筛选';
+  } else {
+    btn.innerHTML = '▲ 收起';
+    btn.title = '收起筛选';
+  }
+}
+
 // ===== Scroll-based auto collapse =====
 let lastScrollY = 0;
 window.addEventListener('scroll', () => {
@@ -198,12 +212,13 @@ function renderResults(companies) {
   document.getElementById('jobCount').textContent = totalJobs;
   
   // Active filter summary
-  const activeKeys = Object.keys(activeFilters);
-  if (activeKeys.length > 0) {
-    document.getElementById('activeFilters').textContent = 
-      `· 筛选: ${companies.length} 家`;
+  const totalActive = Object.values(activeFilters).reduce((s, arr) => s + arr.length, 0);
+  const countEl = document.getElementById('filterActiveCount');
+  if (totalActive > 0) {
+    countEl.style.display = 'inline';
+    countEl.textContent = `${totalActive} 项筛选`;
   } else {
-    document.getElementById('activeFilters').textContent = '';
+    countEl.style.display = 'none';
   }
   
   // Empty state
