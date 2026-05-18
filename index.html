@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobRadar — 打破求职信息差</title>
+<meta name="description" content="发现隐形好公司，抹平求职信息差。按行业、融资、规模、地区筛选优质企业，查看实时招聘信息。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <h1 class="logo">🔍 JobRadar <span class="subtitle">打破求职信息差</span></h1>
+    <p class="tagline">你不知道的好公司，这里都能找到。资质平平也能进好公司——因为你知道别人不知道的。</p>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Stats Bar -->
+  <div class="stats-bar" id="statsBar">
+    <span id="companyCount">0</span> 家公司 ·
+    <span id="jobCount">0</span> 个职位
+    <span id="activeFilters" class="active-filters"></span>
+  </div>
+
+  <!-- Filter Panel -->
+  <aside class="filter-panel" id="filterPanel">
+    <div class="filter-header">
+      <h2>筛选条件</h2>
+      <button class="btn-reset" onclick="resetFilters()">重置全部</button>
+    </div>
+
+    <!-- Industry -->
+    <div class="filter-group">
+      <label class="filter-label">🏭 所属行业</label>
+      <div class="filter-chips" id="filter-industry"></div>
+    </div>
+
+    <!-- Funding Round -->
+    <div class="filter-group">
+      <label class="filter-label">💰 融资轮次</label>
+      <div class="filter-chips" id="filter-funding"></div>
+    </div>
+
+    <!-- Founding Year -->
+    <div class="filter-group">
+      <label class="filter-label">📅 成立时间</label>
+      <div class="filter-chips" id="filter-year"></div>
+    </div>
+
+    <!-- Advantages -->
+    <div class="filter-group">
+      <label class="filter-label">🏆 项目优势</label>
+      <div class="filter-chips" id="filter-advantage"></div>
+    </div>
+
+    <!-- Location -->
+    <div class="filter-group">
+      <label class="filter-label">📍 所在地区</label>
+      <div class="filter-chips" id="filter-location"></div>
+    </div>
+
+    <!-- 36Kr Coverage -->
+    <div class="filter-group">
+      <label class="filter-label">📰 36氪报道</label>
+      <div class="filter-chips" id="filter-media"></div>
+    </div>
+
+    <!-- Hiring Status -->
+    <div class="filter-group">
+      <label class="filter-label">🆕 正在招聘</label>
+      <div class="filter-chips" id="filter-hiring"></div>
+    </div>
+
+    <!-- Name Search -->
+    <div class="filter-group">
+      <label class="filter-label">🔎 名称搜索</label>
+      <input type="text" id="nameSearch" class="search-input" 
+             placeholder="输入公司名称..."
+             oninput="applyFilters()">
+    </div>
+  </aside>
+
+  <!-- Results -->
+  <section class="results" id="results">
+    <div class="results-header">
+      <div class="sort-group">
+        <label>排序：</label>
+        <select id="sortBy" onchange="applyFilters()">
+          <option value="default">综合排序</option>
+          <option value="funding">融资额 ↓</option>
+          <option value="year">成立时间 ↓</option>
+          <option value="jobs">职位数 ↓</option>
+          <option value="name">名称 A-Z</option>
+        </select>
+      </div>
+      <div class="view-toggle">
+        <button class="btn-view active" data-view="card" onclick="setView('card')">📋 卡片</button>
+        <button class="btn-view" data-view="table" onclick="setView('table')">📊 表格</button>
+      </div>
+    </div>
+
+    <!-- Card View -->
+    <div class="company-grid" id="companyGrid"></div>
+
+    <!-- Table View (hidden by default) -->
+    <div class="company-table-wrap" id="companyTable" style="display:none">
+      <table>
+        <thead>
+          <tr>
+            <th>公司名称</th>
+            <th>行业</th>
+            <th>融资轮次</th>
+            <th>地区</th>
+            <th>成立</th>
+            <th>优势</th>
+            <th>职位</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display:none">
+      <p class="empty-icon">🔍</p>
+      <p>没有匹配的公司，试试调整筛选条件</p>
+      <button class="btn-primary" onclick="resetFilters()">重置筛选</button>
+    </div>
+  </section>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>JobRadar — 数据来源：公开融资信息、招聘平台、企业官网 | 帮助求职者抹平信息差</p>
+    <p class="footer-meta">如果对你有用，⭐ <a href="https://github.com/yucben/job-radar" target="_blank">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
