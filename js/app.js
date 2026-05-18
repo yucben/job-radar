@@ -260,6 +260,7 @@ function renderResults(companies) {
         </div>
         <div class="card-info">📍 ${c.location} · 👥 ${c.employees}</div>
         <div class="card-info"><strong>投资人:</strong> ${c.investors}</div>
+        ${c.techStack ? `<div class="card-info" style="margin-top:4px">${c.techStack.slice(0,5).map(t => `<span class="tag tag-gray" style="font-size:.7rem">${t}</span>`).join(' ')}${c.techStack.length > 5 ? ` <span style="font-size:.7rem;color:#94a3b8">+${c.techStack.length-5}</span>` : ''}</div>` : ''}
         <div class="card-jobs">
           ${c.jobs.slice(0, 3).map(j => 
             `<span class="job-badge">${j.title} <span class="salary">${j.salary}</span> · ${j.degree||'本科'}</span>`
