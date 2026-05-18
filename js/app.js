@@ -96,13 +96,16 @@ function toggleFilter(key, value) {
 // ===== Update Chip Visual State =====
 function updateChipUI() {
   document.querySelectorAll('.filter-chip').forEach(chip => {
-    const filterKey = chip.dataset.filter;
-    const filterVal = chip.dataset.value;
-    if (filterVal === '不限') {
-      // "不限" is NEVER highlighted — it's the default/clear state
-      chip.classList.remove('active');
-    } else {
-      chip.classList.toggle('active', activeFilters[filterKey]?.includes(filterVal));
+    const fk = chip.dataset.filter;
+    const fv = chip.dataset.value;
+    chip.classList.remove('active', 'neutral');
+    if (fv === '不限') {
+      // "不限" gets neutral highlight when NO filter is active in this group
+      if (!activeFilters[fk] || activeFilters[fk].length === 0) {
+        chip.classList.add('neutral');
+      }
+    } else if (activeFilters[fk]?.includes(fv)) {
+      chip.classList.add('active');
     }
   });
 }
@@ -293,10 +296,30 @@ function showDetail(id) {
         <div class="modal-meta-item"><span class="label">地区</span><span class="value">${c.location}</span></div>
         <div class="modal-meta-item"><span class="label">规模</span><span class="value">${c.employees}</span></div>
         <div class="modal-meta-item"><span class="label">成立</span><span class="value">${c.year}年</span></div>
+        <div class="modal-meta-item"><span class="label">产品</span><span class="value">${c.product || '—'}</span></div>
+        <div class="modal-meta-item"><span class="label">城市</span><span class="value">${(c.cities||[c.location]).join(' · ')}</span></div>
         <div class="modal-meta-item"><span class="label">优势</span><span class="value">${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join(' ') || '—'}</span></div>
         <div class="modal-meta-item"><span class="label">招聘</span><span class="value"><span class="tag tag-success">${c.recruitment}</span></span></div>
       </div>
     </div>
+    
+    ${c.techStack ? `
+    <div class="modal-section">
+      <h3>技术栈</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        ${c.techStack.map(t => `<span class="tag tag-gray">${t}</span>`).join('')}
+      </div>
+    </div>
+    ` : ''}
+    
+    ${c.benefits ? `
+    <div class="modal-section">
+      <h3>福利待遇</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        ${c.benefits.map(b => `<span class="tag" style="background:#d1fae5;color:#065f46">✅ ${b}</span>`).join('')}
+      </div>
+    </div>
+    ` : ''}
     
     ${c.jobs.length > 0 ? `
     <div class="modal-section">
