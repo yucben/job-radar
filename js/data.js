@@ -27,10 +27,10 @@ const COMPANIES = [
       { title: "大模型算法工程师", salary: "50-100K", exp: "3-5年", degree: "本科" },
       { title: "后端开发工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "产品经理 (AI方向)", salary: "30-50K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品运营", salary: "25-40K", exp: "2-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "测试开发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 2,
@@ -56,10 +56,10 @@ const COMPANIES = [
       { title: "NLP算法研究员", salary: "40-80K", exp: "1-3年", degree: "本科" },
       { title: "前端开发工程师", salary: "25-45K", exp: "1-3年", degree: "本科" },
       { title: "AI应用开发工程师", salary: "30-55K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "AI产品经理", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "后端开发(Go)", salary: "28-48K", exp: "2-5年", degree: "本科" },
       { title: "深度学习研究员", salary: "45-85K", exp: "博士", degree: "博士" },
+    ]
   },
 
   // ===== 企业服务 =====
@@ -87,10 +87,10 @@ const COMPANIES = [
       { title: "前端架构师", salary: "40-60K", exp: "5-10年", degree: "本科" },
       { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "后端开发 (Go)", salary: "30-50K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "UI/UX设计师", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "后端开发(Node.js)", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "测试工程师", salary: "20-35K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 4,
@@ -116,10 +116,10 @@ const COMPANIES = [
       { title: "全栈工程师", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "技术销售", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "测试开发", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "前端开发(React)", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "运维工程师", salary: "20-35K", exp: "2-5年", degree: "大专" },
+    ]
   },
 
   // ===== 医疗健康 =====
@@ -147,10 +147,10 @@ const COMPANIES = [
       { title: "医学图像算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
       { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "临床产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "Java后端开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "前端开发", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "临床数据分析师", salary: "20-35K", exp: "1-3年", degree: "本科" },
+    ]
   },
 
   // ===== 消费电商 =====
@@ -178,9 +178,9 @@ const COMPANIES = [
       { title: "运营总监", salary: "25-40K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "18-30K", exp: "1-3年", degree: "本科" },
       { title: "内容运营", salary: "12-20K", exp: "1-3年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 先进制造 =====
@@ -208,9 +208,9 @@ const COMPANIES = [
       { title: "3D视觉算法工程师", salary: "40-70K", exp: "2-5年", degree: "本科" },
       { title: "ROS开发工程师", salary: "30-50K", exp: "2-5年", degree: "本科" },
       { title: "海外销售经理", salary: "25-45K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 教育 =====
@@ -238,9 +238,9 @@ const COMPANIES = [
       { title: "高级Java开发", salary: "30-45K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "客户成功经理", salary: "18-28K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 跨境出海 =====
@@ -268,9 +268,9 @@ const COMPANIES = [
       { title: "前端架构师 (React)", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "后端开发 (Node.js/Go)", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "SEO/增长运营", salary: "20-35K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 体育游戏 =====
@@ -298,9 +298,9 @@ const COMPANIES = [
       { title: "游戏服务器开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "Unity客户端开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "技术美术 (TA)", salary: "30-55K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 智能硬件 =====
@@ -328,9 +328,9 @@ const COMPANIES = [
       { title: "嵌入式开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "SLAM算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
       { title: "海外电商运营", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 金融 =====
@@ -358,9 +358,9 @@ const COMPANIES = [
       { title: "Java架构师", salary: "40-65K", exp: "5-10年", degree: "本科" },
       { title: "风控算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 本地生活 =====
@@ -388,9 +388,9 @@ const COMPANIES = [
       { title: "供应链产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "数据开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "区域运营经理", salary: "20-35K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 汽车出行 =====
@@ -418,9 +418,9 @@ const COMPANIES = [
       { title: "光学工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "嵌入式软件工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "FPGA开发工程师", salary: "35-55K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 通信/半导体 =====
@@ -448,9 +448,9 @@ const COMPANIES = [
       { title: "SoC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
       { title: "芯片验证工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "Linux内核工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 工具软件 =====
@@ -502,9 +502,9 @@ const COMPANIES = [
       { title: "工艺工程师", salary: "15-25K", exp: "1-3年", degree: "本科" },
       { title: "海外销售经理", salary: "20-35K", exp: "3-5年", degree: "本科" },
       { title: "设备工程师", salary: "12-22K", exp: "1-3年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 社交网络 =====
@@ -532,9 +532,9 @@ const COMPANIES = [
       { title: "推荐算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "Android开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "数据分析师", salary: "20-38K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 物联网/硬件 =====
@@ -562,9 +562,9 @@ const COMPANIES = [
       { title: "嵌入式开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "Java后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "海外产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 物流 =====
@@ -591,9 +591,9 @@ const COMPANIES = [
     jobs: [
       { title: "Java后端开发", salary: "18-30K", exp: "2-5年", degree: "本科" },
       { title: "算法工程师", salary: "25-40K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 第二批：更多隐形好公司 =====
@@ -623,9 +623,9 @@ const COMPANIES = [
       { title: "运动控制算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "SLAM算法工程师", salary: "30-55K", exp: "2-5年", degree: "本科" },
       { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 22,
@@ -651,9 +651,9 @@ const COMPANIES = [
       { title: "机器人控制算法", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "C++开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "海外技术支持", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 医疗健康 =====
@@ -681,9 +681,9 @@ const COMPANIES = [
       { title: "计算化学研究员", salary: "40-70K", exp: "博士", degree: "本科" },
       { title: "AI算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "Python后端开发", salary: "28-48K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 24,
@@ -709,9 +709,9 @@ const COMPANIES = [
       { title: "医学图像算法", salary: "30-50K", exp: "2-5年", degree: "本科" },
       { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 企业服务 =====
@@ -739,9 +739,9 @@ const COMPANIES = [
       { title: "前端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "Go后端开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 26,
@@ -767,9 +767,9 @@ const COMPANIES = [
       { title: "Java架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "测试开发", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 通信/半导体 =====
@@ -797,9 +797,9 @@ const COMPANIES = [
       { title: "IC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
       { title: "工艺整合工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "设备工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
   {
     id: 28,
@@ -825,9 +825,9 @@ const COMPANIES = [
       { title: "GPU架构工程师", salary: "50-80K", exp: "5-10年", degree: "本科" },
       { title: "AI编译器开发", salary: "40-65K", exp: "3-5年", degree: "本科" },
       { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 文化娱乐 =====
@@ -855,9 +855,9 @@ const COMPANIES = [
       { title: "UE5引擎开发", salary: "25-40K", exp: "2-5年", degree: "本科" },
       { title: "3D动画师", salary: "18-30K", exp: "1-3年", degree: "本科" },
       { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 教育 =====
@@ -885,9 +885,9 @@ const COMPANIES = [
       { title: "后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "数据工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "AI课程设计师", salary: "20-35K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 消费电商 =====
@@ -915,9 +915,9 @@ const COMPANIES = [
       { title: "嵌入式开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "电商运营总监", salary: "30-50K", exp: "5-10年", degree: "本科" },
       { title: "工业设计", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 能源环保 =====
@@ -945,9 +945,9 @@ const COMPANIES = [
       { title: "电池研发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
       { title: "工艺工程师", salary: "18-30K", exp: "1-3年", degree: "本科" },
       { title: "MES开发工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 金融 =====
@@ -975,9 +975,9 @@ const COMPANIES = [
       { title: "风控算法工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "Java开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "数据分析师", salary: "20-35K", exp: "2-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 汽车出行 =====
@@ -1005,9 +1005,9 @@ const COMPANIES = [
       { title: "自动驾驶算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "嵌入式开发", salary: "25-42K", exp: "2-5年", degree: "本科" },
       { title: "系统工程师", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 广告营销 =====
@@ -1035,9 +1035,9 @@ const COMPANIES = [
       { title: "AI算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 物联网/硬件 =====
@@ -1065,9 +1065,9 @@ const COMPANIES = [
       { title: "嵌入式开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "IoT平台开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "海外产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 物流 =====
@@ -1095,9 +1095,9 @@ const COMPANIES = [
       { title: "路径规划算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "C++开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "海外项目经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 区块链 =====
@@ -1125,9 +1125,9 @@ const COMPANIES = [
       { title: "芯片设计工程师", salary: "45-75K", exp: "3-5年", degree: "本科" },
       { title: "AI编译器开发", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "全栈工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 传统制造（高端化） =====
@@ -1155,9 +1155,9 @@ const COMPANIES = [
       { title: "计算机视觉算法", salary: "40-65K", exp: "3-5年", degree: "本科" },
       { title: "C++开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "解决方案架构师", salary: "28-45K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   },
 
   // ===== 文化娱乐（二次元） =====
@@ -1185,9 +1185,9 @@ const COMPANIES = [
       { title: "Unity开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "游戏服务器开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "3D角色美术", salary: "22-38K", exp: "3-5年", degree: "本科" }
-    ]
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
+    ]
   }
 ];
 
