@@ -3,109 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JobRadar — 打破求职信息差</title>
-<meta name="description" content="发现隐形好公司，抹平求职信息差。按行业、融资、规模、地区筛选优质企业，查看实时招聘信息。">
+<title>JobRadar — 发现隐形好公司</title>
+<meta name="description" content="打破求职信息差。按行业、融资、地区筛选优质企业。">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Header -->
-<header class="header">
-  <div class="container">
-    <h1 class="logo">🔍 JobRadar <span class="subtitle">打破求职信息差</span></h1>
-    <p class="tagline">你不知道的好公司，这里都能找到。资质平平也能进好公司——因为你知道别人不知道的。</p>
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="brand-icon">✦</span>
+      <span class="brand-name">JobRadar</span>
+    </div>
+    <p class="brand-tagline">你不知道的好公司，这里都能找到</p>
+    <div class="header-search">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="nameSearch" class="search-input"
+             placeholder="搜索公司名称..."
+             autocomplete="off"
+             oninput="applyFilters()">
+      <kbd class="search-hint">/</kbd>
+    </div>
   </div>
 </header>
 
-<main class="container">
-  <!-- Stats Bar -->
-  <div class="stats-bar" id="statsBar">
-    <span id="companyCount">0</span> 家公司 ·
-    <span id="jobCount">0</span> 个职位
-    <span id="activeFilters" class="active-filters"></span>
+<div class="stats-strip" id="statsStrip">
+  <div class="stat-item">
+    <span class="stat-value" id="companyCount">0</span>
+    <span class="stat-label">公司</span>
   </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-value" id="jobCount">0</span>
+    <span class="stat-label">职位</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-value" id="resultCount">0</span>
+    <span class="stat-label">匹配</span>
+  </div>
+  <span class="stats-active" id="activeFilterBadge" style="display:none"></span>
+</div>
 
-  <!-- Filter Panel -->
-  <aside class="filter-panel" id="filterPanel">
-    <div class="filter-header">
-      <h2>🔍 筛选条件</h2>
-      <div style="display:flex;gap:8px;align-items:center">
-        <span class="filter-active-count" id="filterActiveCount" style="display:none"></span>
-        <button class="btn-reset" onclick="resetFilters()">重置</button>
-        <button class="btn-toggle-panel" onclick="togglePanel()" id="btnTogglePanel" title="收起筛选">▲ 收起</button>
-      </div>
+<main class="main-layout">
+  <aside class="filter-sidebar" id="filterSidebar">
+    <div class="sidebar-head">
+      <span>筛选</span>
+      <button class="btn-text" onclick="resetFilters()">清除</button>
     </div>
-    <div class="filter-body" id="filterBody">
 
-    <!-- Industry -->
-    <div class="filter-group">
-      <label class="filter-label" onclick="toggleGroup(this)">🏭 所属行业 <span class="arrow">▾</span></label>
+    <div class="filter-group" data-group="industry">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        行业
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
       <div class="filter-chips" id="filter-industry"></div>
     </div>
 
-    <!-- Funding Round -->
-    <div class="filter-group">
-      <label class="filter-label" onclick="toggleGroup(this)">💰 融资轮次 <span class="arrow">▾</span></label>
-      <div class="filter-chips" id="filter-funding"></div>
+    <div class="filter-group" data-group="funding">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        融资轮次
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-chips scrollable" id="filter-funding"></div>
     </div>
 
-    <!-- Founding Year -->
-    <div class="filter-group collapsed">
-      <label class="filter-label" onclick="toggleGroup(this)">📅 成立时间 <span class="arrow">▸</span></label>
-      <div class="filter-chips" id="filter-year"></div>
+    <div class="filter-group collapsed" data-group="year">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        成立时间
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-chips scrollable" id="filter-year"></div>
     </div>
 
-    <!-- Advantages -->
-    <div class="filter-group collapsed">
-      <label class="filter-label" onclick="toggleGroup(this)">🏆 项目优势 <span class="arrow">▸</span></label>
+    <div class="filter-group" data-group="location">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        地区
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-chips scrollable" id="filter-location"></div>
+    </div>
+
+    <div class="filter-group collapsed" data-group="advantage">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        标签
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
       <div class="filter-chips" id="filter-advantage"></div>
     </div>
 
-    <!-- Location -->
-    <div class="filter-group">
-      <label class="filter-label" onclick="toggleGroup(this)">📍 所在地区 <span class="arrow">▾</span></label>
-      <div class="filter-chips" id="filter-location"></div>
-    </div>
-
-    <!-- 36Kr Coverage -->
-    <div class="filter-group collapsed">
-      <label class="filter-label" onclick="toggleGroup(this)">📰 36氪报道 <span class="arrow">▸</span></label>
-      <div class="filter-chips" id="filter-media"></div>
-    </div>
-
-    <!-- Hiring Status -->
-    <div class="filter-group collapsed">
-      <label class="filter-label" onclick="toggleGroup(this)">🆕 正在招聘 <span class="arrow">▸</span></label>
-      <div class="filter-chips" id="filter-hiring"></div>
-    </div>
-
-    <!-- Recruitment Type -->
-    <div class="filter-group">
-      <label class="filter-label" onclick="toggleGroup(this)">🎓 招聘类型 <span class="arrow">▾</span></label>
+    <div class="filter-group collapsed" data-group="recruitment">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        招聘类型
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
       <div class="filter-chips" id="filter-recruitment"></div>
     </div>
 
-    <!-- Education -->
-    <div class="filter-group collapsed">
-      <label class="filter-label" onclick="toggleGroup(this)">📚 学历要求 <span class="arrow">▸</span></label>
+    <div class="filter-group collapsed" data-group="degree">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        学历要求
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
       <div class="filter-chips" id="filter-degree"></div>
     </div>
 
-    <!-- Name Search -->
-    <div class="filter-group">
-      <label class="filter-label">🔎 名称搜索</label>
-      <input type="text" id="nameSearch" class="search-input" 
-             placeholder="输入公司名称..."
-             oninput="applyFilters()">
+    <div class="filter-group collapsed" data-group="media">
+      <button class="filter-group-label" onclick="toggleFilterGroup(this)">
+        36氪报道
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="filter-chips" id="filter-media"></div>
     </div>
-    </div><!-- /filter-body -->
   </aside>
 
-  <!-- Results -->
-  <section class="results" id="results">
-    <div class="results-header">
-      <div class="sort-group">
-        <label>排序：</label>
+  <section class="results-area">
+    <div class="results-toolbar">
+      <div class="sort-select">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="sort-icon">
+          <path d="M3 6h18M6 12h12M9 18h6"/>
+        </svg>
         <select id="sortBy" onchange="applyFilters()">
           <option value="default">综合排序</option>
           <option value="funding">融资额 ↓</option>
@@ -114,57 +149,50 @@
           <option value="name">名称 A-Z</option>
         </select>
       </div>
-      <div class="view-toggle">
-        <button class="btn-view active" data-view="card" onclick="setView('card')">📋 卡片</button>
-        <button class="btn-view" data-view="table" onclick="setView('table')">📊 表格</button>
+      <div class="view-tabs">
+        <button class="view-tab active" data-view="card" onclick="setView('card')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          卡片
+        </button>
+        <button class="view-tab" data-view="table" onclick="setView('table')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          列表
+        </button>
       </div>
     </div>
 
-    <!-- Card View -->
     <div class="company-grid" id="companyGrid"></div>
 
-    <!-- Table View (hidden by default) -->
     <div class="company-table-wrap" id="companyTable" style="display:none">
       <table>
         <thead>
           <tr>
-            <th>公司名称</th>
-            <th>行业</th>
-            <th>融资轮次</th>
-            <th>地区</th>
-            <th>成立</th>
-            <th>优势</th>
-            <th>职位</th>
-            <th>操作</th>
+            <th>公司</th><th>行业</th><th>融资</th><th>地区</th><th>成立</th><th>标签</th><th>职位</th><th></th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
       </table>
     </div>
 
-    <!-- Empty State -->
     <div class="empty-state" id="emptyState" style="display:none">
-      <p class="empty-icon">🔍</p>
-      <p>没有匹配的公司，试试调整筛选条件</p>
-      <button class="btn-primary" onclick="resetFilters()">重置筛选</button>
+      <div class="empty-illustration">
+        <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="45" r="20" stroke="currentColor" stroke-width="2" opacity="0.3"/><path d="M30 100c0-16.6 13.4-30 30-30s30 13.4 30 30" stroke="currentColor" stroke-width="2" opacity="0.3"/><rect x="38" y="70" width="44" height="8" rx="4" fill="currentColor" opacity="0.15"/><rect x="42" y="82" width="36" height="6" rx="3" fill="currentColor" opacity="0.1"/></svg>
+      </div>
+      <p class="empty-title">没有匹配的公司</p>
+      <p class="empty-desc">调整筛选条件，或者清空筛选重新探索</p>
+      <button class="btn-primary" onclick="resetFilters()">清除筛选</button>
     </div>
   </section>
-
-  <!-- Detail Modal -->
-  <div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div id="modalBody"></div>
-    </div>
-  </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <p>JobRadar — 数据来源：公开融资信息、招聘平台、企业官网 | 帮助求职者抹平信息差</p>
-    <p class="footer-meta">如果对你有用，⭐ <a href="https://github.com/yucben/job-radar" target="_blank">GitHub</a></p>
+<div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+  <div class="modal-panel" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div id="modalBody"></div>
   </div>
-</footer>
+</div>
 
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
