@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JobRadar — 打破求职信息差</title>
 <meta name="description" content="发现隐形好公司，抹平求职信息差。按行业、融资、规模、地区筛选优质企业，查看实时招聘信息。">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 </header>
 
 <!-- Filter Bar -->
-<div class="filter-bar" id="filterBar">
+<div class="filter-bar" id="filterBar" style="min-height:44px">
   <div class="container">
     <div class="filter-bar-inner">
       <!-- Search -->
@@ -28,7 +28,7 @@
                placeholder="搜索公司名称..." oninput="applyFilters()">
       </div>
       
-      <!-- Filter dropdowns -->
+      <!-- Filter dropdowns (populated by JS) -->
       <div class="filter-dropdowns" id="filterDropdowns"></div>
       
       <!-- Reset -->
@@ -67,10 +67,8 @@
       </div>
     </div>
 
-    <!-- Card View -->
     <div class="company-grid" id="companyGrid"></div>
 
-    <!-- Table View -->
     <div class="company-table-wrap" id="companyTable" style="display:none">
       <table>
         <thead>
@@ -89,7 +87,6 @@
       </table>
     </div>
 
-    <!-- Empty State -->
     <div class="empty-state" id="emptyState" style="display:none">
       <p class="empty-icon">🔍</p>
       <p>没有匹配的公司，试试调整筛选条件</p>
@@ -97,7 +94,6 @@
     </div>
   </section>
 
-  <!-- Detail Modal -->
   <div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal()">✕</button>
@@ -113,7 +109,7 @@
   </div>
 </footer>
 
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<script src="js/data.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
 </body>
 </html>
