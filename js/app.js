@@ -3,91 +3,82 @@
 let activeFilters = {};
 let currentView = 'card';
 let currentSort = 'default';
-let scrollCollapsed = false;
-let userExpandedGroups = new Set();
+let openDropdown = null;
 
-// ===== Toggle entire filter panel =====
-function togglePanel() {
-  const panel = document.getElementById('filterPanel');
-  const btn = document.getElementById('btnTogglePanel');
-  panel.classList.toggle('collapsed');
-  if (panel.classList.contains('collapsed')) {
-    btn.innerHTML = '▼ 展开';
-    btn.title = '展开筛选';
-  } else {
-    btn.innerHTML = '▲ 收起';
-    btn.title = '收起筛选';
-  }
-}
-
-// ===== Scroll-based auto collapse =====
-let lastScrollY = 0;
-window.addEventListener('scroll', () => {
-  const panel = document.getElementById('filterPanel');
-  if (!panel) return;
-  const rect = panel.getBoundingClientRect();
-  const currentScroll = window.scrollY;
-  
-  // When filter panel scrolls out of view (scrolled past it), collapse all groups
-  if (rect.bottom < 0 && currentScroll > lastScrollY && !scrollCollapsed) {
-    scrollCollapsed = true;
-    document.querySelectorAll('.filter-group').forEach(g => {
-      if (!g.classList.contains('collapsed')) {
-        g.dataset.wasOpen = 'true';
-      }
-      g.classList.add('collapsed');
-      g.querySelector('.arrow').textContent = '▸';
-    });
-  }
-  // When scrolling back to top, restore previously open groups
-  if (currentScroll < 100 && scrollCollapsed) {
-    scrollCollapsed = false;
-    document.querySelectorAll('.filter-group').forEach(g => {
-      if (g.dataset.wasOpen === 'true') {
-        g.classList.remove('collapsed');
-        g.querySelector('.arrow').textContent = '▾';
-        delete g.dataset.wasOpen;
-      }
-    });
-  }
-  lastScrollY = currentScroll;
-}, { passive: true });
-
-// ===== Toggle Filter Group Collapse =====
-function toggleGroup(label) {
-  const group = label.parentElement;
-  const arrow = label.querySelector('.arrow');
-  group.classList.toggle('collapsed');
-  if (group.classList.contains('collapsed')) {
-    arrow.textContent = '▸';
-  } else {
-    arrow.textContent = '▾';
-  }
-}
+// Filter definitions for the horizontal bar (order matters)
+const FILTER_BAR = [
+  { key: 'industry', label: '🏭 行业' },
+  { key: 'funding', label: '💰 融资' },
+  { key: 'location', label: '📍 地区' },
+  { key: 'advantage', label: '🏆 优势' },
+  { key: 'recruitment', label: '🎓 招聘' },
+  { key: 'bestEmployer', label: '🏅 最佳雇主' },
+  { key: 'year', label: '📅 成立' },
+  { key: 'media', label: '📰 36氪' },
+  { key: 'hiring', label: '🆕 招聘中' },
+  { key: 'degree', label: '📚 学历' },
+];
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
-  renderFilterChips();
+  buildFilterBar();
   applyFilters();
+  
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.filter-dropdown')) {
+      closeAllDropdowns();
+    }
+  });
 });
 
-// ===== Render Filter Chips =====
-function renderFilterChips() {
-  for (const [key, options] of Object.entries(FILTERS)) {
-    const container = document.getElementById(`filter-${key}`);
-    if (!container) continue;
-    container.innerHTML = options.map(opt => 
-      `<span class="filter-chip" data-filter="${key}" data-value="${opt}" onclick="toggleFilter('${key}', '${opt}')">${opt}</span>`
-    ).join('');
+// ===== Build Filter Bar =====
+function buildFilterBar() {
+  const container = document.getElementById('filterDropdowns');
+  container.innerHTML = FILTER_BAR.map(f => {
+    const options = FILTERS[f.key] || [];
+    return `
+      <div class="filter-dropdown" data-key="${f.key}">
+        <button class="filter-dropdown-btn" onclick="toggleDropdown(event, '${f.key}')">
+          ${f.label} <span class="arrow">▾</span>
+        </button>
+        <div class="filter-dropdown-panel">
+          <div class="chips">
+            ${options.map(opt => 
+              `<span class="filter-chip" data-filter="${f.key}" data-value="${opt}" onclick="event.stopPropagation(); toggleFilter('${f.key}', '${opt}')">${opt}</span>`
+            ).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ===== Dropdown Toggle =====
+function toggleDropdown(e, key) {
+  e.stopPropagation();
+  const dd = document.querySelector(`.filter-dropdown[data-key="${key}"]`);
+  if (!dd) return;
+  
+  const wasOpen = dd.classList.contains('open');
+  closeAllDropdowns();
+  
+  if (!wasOpen) {
+    dd.classList.add('open');
+    openDropdown = key;
   }
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.filter-dropdown.open').forEach(d => d.classList.remove('open'));
+  openDropdown = null;
 }
 
 // ===== Toggle Filter =====
 function toggleFilter(key, value) {
   if (value === '不限') {
-    // "不限" acts as clear — remove this filter group entirely
     delete activeFilters[key];
-    updateChipUI();
+    updateUI();
     applyFilters();
     return;
   }
@@ -95,26 +86,24 @@ function toggleFilter(key, value) {
   if (!activeFilters[key]) activeFilters[key] = [];
   
   if (activeFilters[key].includes(value)) {
-    // Remove if already active
     activeFilters[key] = activeFilters[key].filter(v => v !== value);
     if (activeFilters[key].length === 0) delete activeFilters[key];
   } else {
-    // Add to active
     activeFilters[key].push(value);
   }
   
-  updateChipUI();
+  updateUI();
   applyFilters();
 }
 
-// ===== Update Chip Visual State =====
-function updateChipUI() {
+// ===== Update UI (chips + tags + buttons) =====
+function updateUI() {
+  // Update chip states
   document.querySelectorAll('.filter-chip').forEach(chip => {
     const fk = chip.dataset.filter;
     const fv = chip.dataset.value;
     chip.classList.remove('active', 'neutral');
     if (fv === '不限') {
-      // "不限" gets neutral highlight when NO filter is active in this group
       if (!activeFilters[fk] || activeFilters[fk].length === 0) {
         chip.classList.add('neutral');
       }
@@ -122,6 +111,60 @@ function updateChipUI() {
       chip.classList.add('active');
     }
   });
+  
+  // Update dropdown button states
+  document.querySelectorAll('.filter-dropdown').forEach(dd => {
+    const key = dd.dataset.key;
+    const btn = dd.querySelector('.filter-dropdown-btn');
+    if (activeFilters[key] && activeFilters[key].length > 0) {
+      btn.classList.add('has-active');
+    } else {
+      btn.classList.remove('has-active');
+    }
+  });
+  
+  // Update active tags
+  renderActiveTags();
+  
+  // Reset button
+  const totalActive = Object.values(activeFilters).reduce((s, arr) => s + arr.length, 0);
+  const btnReset = document.getElementById('btnReset');
+  if (totalActive > 0) {
+    btnReset.style.display = '';
+    btnReset.classList.add('visible');
+  } else {
+    btnReset.style.display = 'none';
+    btnReset.classList.remove('visible');
+  }
+}
+
+// ===== Render Active Tags =====
+function renderActiveTags() {
+  const container = document.getElementById('activeTags');
+  let tags = [];
+  
+  for (const [key, values] of Object.entries(activeFilters)) {
+    const label = (FILTER_BAR.find(f => f.key === key) || {}).label || key;
+    for (const v of values) {
+      tags.push({ key, value: v, label });
+    }
+  }
+  
+  container.innerHTML = tags.map(t => 
+    `<span class="active-tag" onclick="removeFilter('${t.key}', '${t.value}')" title="点击移除">
+      ${t.value} <span class="remove">✕</span>
+    </span>`
+  ).join('');
+}
+
+// ===== Remove Single Filter =====
+function removeFilter(key, value) {
+  if (activeFilters[key]) {
+    activeFilters[key] = activeFilters[key].filter(v => v !== value);
+    if (activeFilters[key].length === 0) delete activeFilters[key];
+  }
+  updateUI();
+  applyFilters();
 }
 
 // ===== Reset Filters =====
@@ -130,7 +173,7 @@ function resetFilters() {
   document.getElementById('nameSearch').value = '';
   document.getElementById('sortBy').value = 'default';
   currentSort = 'default';
-  updateChipUI();
+  updateUI();
   applyFilters();
 }
 
@@ -141,39 +184,31 @@ function applyFilters() {
   currentSort = sortBy;
   
   let filtered = COMPANIES.filter(c => {
-    // Name search
     if (nameQuery && !c.name.toLowerCase().includes(nameQuery)) return false;
     
-    // Multi-select filters
     for (const [key, values] of Object.entries(activeFilters)) {
-      if (key === 'industry' && c.industry !== '不限' && !values.some(v => v === c.industry)) return false;
+      if (key === 'industry' && !values.some(v => v === c.industry)) return false;
       if (key === 'funding' && !values.some(v => v === c.funding)) return false;
       if (key === 'year') {
         if (!values.some(v => {
           if (v === '2010年及以前') return c.year <= 2010;
-          if (v === '不限') return true;
           const y = parseInt(v);
           return c.year === y;
         })) return false;
       }
       if (key === 'advantage') {
-        if (c.advantage.length === 0) {
-          if (!values.includes('不限')) return false;
-        } else {
-          if (!values.some(v => v === '不限' || c.advantage.includes(v))) return false;
-        }
+        if (c.advantage.length === 0) return false;
+        if (!values.some(v => c.advantage.includes(v))) return false;
       }
       if (key === 'location' && !values.some(v => v === c.location)) return false;
       if (key === 'media') {
         if (!values.some(v => {
-          if (v === '不限') return true;
           if (v === '是') return c.media === true;
           if (v === '否') return c.media === false;
         })) return false;
       }
       if (key === 'hiring') {
         if (!values.some(v => {
-          if (v === '不限') return true;
           if (v === '是') return c.hiring === true;
           if (v === '否') return c.hiring === false;
         })) return false;
@@ -181,13 +216,11 @@ function applyFilters() {
       if (key === 'recruitment' && !values.some(v => v === c.recruitment)) return false;
       if (key === 'bestEmployer') {
         if (!values.some(v => {
-          if (v === '不限') return true;
           if (v === '是') return c.bestEmployer === true;
           if (v === '否') return c.bestEmployer === false;
         })) return false;
       }
       if (key === 'degree') {
-        // Degree hierarchy: 大专(1) < 本科(2) < 硕士(3) < 博士(4)
         const degRank = { '大专': 1, '本科': 2, '硕士': 3, '博士': 4 };
         if (!values.some(d => {
           const minRank = degRank[d];
@@ -228,16 +261,6 @@ function renderResults(companies) {
   const bestEmployerCount = COMPANIES.filter(c => c.bestEmployer).length;
   document.getElementById('bestEmployerCount').textContent = bestEmployerCount;
   
-  // Active filter summary
-  const totalActive = Object.values(activeFilters).reduce((s, arr) => s + arr.length, 0);
-  const countEl = document.getElementById('filterActiveCount');
-  if (totalActive > 0) {
-    countEl.style.display = 'inline';
-    countEl.textContent = `${totalActive} 项筛选`;
-  } else {
-    countEl.style.display = 'none';
-  }
-  
   // Empty state
   if (companies.length === 0) {
     grid.innerHTML = '';
@@ -266,7 +289,7 @@ function renderResults(companies) {
           <span class="tag tag-success">${c.funding}</span>
           ${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join('')}
           ${c.recruitment === '校招' ? '<span class="tag" style="background:#fef3c7;color:#92400e">🎓校招</span>' : ''}
-          ${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆最佳雇主2025</span>' : ''}
+          ${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆最佳雇主</span>' : ''}
         </div>
         <div class="card-info">📍 ${c.location} · 👥 ${c.employees}</div>
         <div class="card-info"><strong>投资人:</strong> ${c.investors}</div>
@@ -294,9 +317,8 @@ function renderResults(companies) {
         <td>${c.location}</td>
         <td>${c.year}年</td>
         <td>${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join(' ') || '—'}</td>
-        <td>${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆最佳雇主</span>' : '—'}</td>
+        <td>${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆</span>' : '—'}</td>
         <td>${c.jobs.length} 个职位${c.jobs.length > 0 ? ` · ${c.jobs[0].salary}` : ''}</td>
-        <td><span style="color:var(--primary);cursor:pointer;font-size:.85rem" onclick="showDetail(${c.id})">查看 →</span></td>
       </tr>
     `).join('');
   }
