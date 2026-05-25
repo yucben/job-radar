@@ -14,6 +14,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "杨植麟创立的大模型公司，Kimi Chat 爆火，阿里/红杉重注。AGI 赛道最受瞩目的创业公司之一，技术氛围极强。",
     fundingAmt: "超10亿美元",
     investors: "阿里巴巴、红杉中国、砺思资本",
@@ -26,7 +27,7 @@ const COMPANIES = [
     jobs: [
       { title: "大模型算法工程师", salary: "50-100K", exp: "3-5年", degree: "本科" },
       { title: "后端开发工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
-      { title: "产品经理 (AI方向)", salary: "30-50K", exp: "3-5年", degree: "本科" }
+      { title: "产品经理 (AI方向)", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "产品运营", salary: "25-40K", exp: "2-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "测试开发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
@@ -43,6 +44,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "清华系大模型公司，GLM 系列模型，B端落地扎实。已获北京市人工智能产业投资基金等国资支持，商业化路径清晰。",
     fundingAmt: "超25亿人民币",
     investors: "君联资本、启明创投、北京市AI产业基金",
@@ -55,7 +57,7 @@ const COMPANIES = [
     jobs: [
       { title: "NLP算法研究员", salary: "40-80K", exp: "1-3年", degree: "本科" },
       { title: "前端开发工程师", salary: "25-45K", exp: "1-3年", degree: "本科" },
-      { title: "AI应用开发工程师", salary: "30-55K", exp: "2-5年", degree: "本科" }
+      { title: "AI应用开发工程师", salary: "30-55K", exp: "2-5年", degree: "本科" },
       { title: "AI产品经理", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "后端开发(Go)", salary: "28-48K", exp: "2-5年", degree: "本科" },
       { title: "深度学习研究员", salary: "45-85K", exp: "博士", degree: "博士" },
@@ -74,6 +76,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: true,
     desc: "产品设计协作平台，已服务超百万设计师和产品经理。从设计稿到代码一站式协作，在国内设计工具赛道稳居头部。",
     fundingAmt: "10亿+人民币",
     investors: "GGV纪源资本、红杉中国、金沙江创投",
@@ -86,7 +89,7 @@ const COMPANIES = [
     jobs: [
       { title: "前端架构师", salary: "40-60K", exp: "5-10年", degree: "本科" },
       { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "后端开发 (Go)", salary: "30-50K", exp: "2-5年", degree: "本科" }
+      { title: "后端开发 (Go)", salary: "30-50K", exp: "2-5年", degree: "本科" },
       { title: "UI/UX设计师", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "后端开发(Node.js)", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "测试工程师", salary: "20-35K", exp: "2-5年", degree: "本科" },
@@ -103,6 +106,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "技术人才评估平台，用实战编程替代传统笔面试。已服务字节、腾讯等数千家企业，技术面试 SaaS 赛道头部玩家。",
     fundingAmt: "近亿元人民币",
     investors: "红杉中国、高瓴创投",
@@ -115,7 +119,7 @@ const COMPANIES = [
     jobs: [
       { title: "全栈工程师", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "技术销售", salary: "20-35K", exp: "2-5年", degree: "本科" },
-      { title: "测试开发", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "测试开发", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "前端开发(React)", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "运维工程师", salary: "20-35K", exp: "2-5年", degree: "大专" },
@@ -134,6 +138,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "AI 医疗影像诊断平台，覆盖肺部、乳腺、脑卒中等多部位。已有 NMPA 三类证，产品落地数百家医院。",
     fundingAmt: "数亿元人民币",
     investors: "君联资本、联想之星、丹华资本",
@@ -146,7 +151,7 @@ const COMPANIES = [
     jobs: [
       { title: "医学图像算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
       { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
-      { title: "临床产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
+      { title: "临床产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "Java后端开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "前端开发", salary: "22-38K", exp: "2-5年", degree: "本科" },
       { title: "临床数据分析师", salary: "20-35K", exp: "1-3年", degree: "本科" },
@@ -165,6 +170,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "优质食品私域电商平台，主打溯源+高品质食品。社交电商新锐，月GMV破亿，团队小而精悍。",
     fundingAmt: "千万级人民币",
     investors: "顺为资本、真格基金",
@@ -177,7 +183,7 @@ const COMPANIES = [
     jobs: [
       { title: "运营总监", salary: "25-40K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "18-30K", exp: "1-3年", degree: "本科" },
-      { title: "内容运营", salary: "12-20K", exp: "1-3年", degree: "本科" }
+      { title: "内容运营", salary: "12-20K", exp: "1-3年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -195,6 +201,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: true,
     desc: "工业机器人 3D 视觉引导，已落地汽车、物流、家电等场景。全球领先的 AI+工业机器人公司，出海进展快。",
     fundingAmt: "超15亿人民币",
     investors: "美团、IDG资本、红杉中国",
@@ -207,7 +214,7 @@ const COMPANIES = [
     jobs: [
       { title: "3D视觉算法工程师", salary: "40-70K", exp: "2-5年", degree: "本科" },
       { title: "ROS开发工程师", salary: "30-50K", exp: "2-5年", degree: "本科" },
-      { title: "海外销售经理", salary: "25-45K", exp: "3-5年", degree: "本科" }
+      { title: "海外销售经理", salary: "25-45K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -225,6 +232,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "知识产品与用户服务 SaaS，服务数百万知识创作者。从知识付费到企业培训，品牌认知度高，盈利稳定。",
     fundingAmt: "数亿元人民币",
     investors: "腾讯、IDG资本",
@@ -237,7 +245,7 @@ const COMPANIES = [
     jobs: [
       { title: "高级Java开发", salary: "30-45K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "22-38K", exp: "3-5年", degree: "本科" },
-      { title: "客户成功经理", salary: "18-28K", exp: "2-5年", degree: "本科" }
+      { title: "客户成功经理", salary: "18-28K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -255,6 +263,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "跨境电商独立站 SaaS，服务全球超 30 万商家。对标 Shopify，专注品牌出海，海外市场增速迅猛。",
     fundingAmt: "超1.5亿美元",
     investors: "软银愿景基金、红杉中国、前海母基金",
@@ -267,7 +276,7 @@ const COMPANIES = [
     jobs: [
       { title: "前端架构师 (React)", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "后端开发 (Node.js/Go)", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "SEO/增长运营", salary: "20-35K", exp: "3-5年", degree: "本科" }
+      { title: "SEO/增长运营", salary: "20-35K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -285,6 +294,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "明日方舟开发商，二次元游戏 Top 级厂商。单款产品年流水数十亿，研发实力强，新作备受期待。",
     fundingAmt: "未披露",
     investors: "腾讯、B站",
@@ -297,7 +307,7 @@ const COMPANIES = [
     jobs: [
       { title: "游戏服务器开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "Unity客户端开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
-      { title: "技术美术 (TA)", salary: "30-55K", exp: "3-5年", degree: "本科" }
+      { title: "技术美术 (TA)", salary: "30-55K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -315,6 +325,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "智能清洁家电，扫地机器人/洗地机/吸尘器。全球出货量快速增长，技术与性价比双领先，海外市场爆发。",
     fundingAmt: "超36亿人民币",
     investors: "华兴新经济基金、CPE源峰、碧桂园创投",
@@ -327,7 +338,7 @@ const COMPANIES = [
     jobs: [
       { title: "嵌入式开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "SLAM算法工程师", salary: "35-60K", exp: "2-5年", degree: "本科" },
-      { title: "海外电商运营", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "海外电商运营", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -345,6 +356,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "一站式外贸企业跨境金融和风控服务，帮助中小外贸企业解决收款难题。已服务超 30 万家外贸企业。",
     fundingAmt: "超3亿美元",
     investors: "D1 Capital Partners、Telstra Ventures、招商局创投",
@@ -357,7 +369,7 @@ const COMPANIES = [
     jobs: [
       { title: "Java架构师", salary: "40-65K", exp: "5-10年", degree: "本科" },
       { title: "风控算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
-      { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" }
+      { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -375,6 +387,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "火锅烧烤食材超市，全国门店超万。从供应链到终端门店全链路打通，下沉市场扩张迅猛。",
     fundingAmt: "超30亿人民币",
     investors: "IDG资本、招银国际、茅台基金",
@@ -387,7 +400,7 @@ const COMPANIES = [
     jobs: [
       { title: "供应链产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "数据开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "区域运营经理", salary: "20-35K", exp: "3-5年", degree: "本科" }
+      { title: "区域运营经理", salary: "20-35K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -405,6 +418,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "全球领先的激光雷达制造商，已在美国纳斯达克上市。理想、小米、美团等头部客户，自动驾驶核心供应商。",
     fundingAmt: "IPO 融资1.9亿美元",
     investors: "百度、小米、博世、美团",
@@ -417,7 +431,7 @@ const COMPANIES = [
     jobs: [
       { title: "光学工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "嵌入式软件工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
-      { title: "FPGA开发工程师", salary: "35-55K", exp: "3-5年", degree: "本科" }
+      { title: "FPGA开发工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -435,6 +449,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "ARM 架构高性能 CPU 芯片设计公司。团队来自 AMD/苹果/高通，专注 PC/服务器 CPU，国产替代明星。",
     fundingAmt: "数亿元人民币",
     investors: "联想创投、蔚来资本、启明创投",
@@ -447,7 +462,7 @@ const COMPANIES = [
     jobs: [
       { title: "SoC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
       { title: "芯片验证工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
-      { title: "Linux内核工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
+      { title: "Linux内核工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -465,6 +480,7 @@ const COMPANIES = [
     media: false,
     hiring: false,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "高精度 OCR 文字识别工具，个人开发者作品。App Store 效率榜常年前列，小而美的标杆产品。",
     fundingAmt: "未融资",
     investors: "个人独立开发",
@@ -475,6 +491,7 @@ const COMPANIES = [
     benefits: ["独立开发", "远程", "收入分成"],
     website: "https://baimiaoapp.com",
     jobs: []
+    ]
   },
 
   // ===== 能源环保 =====
@@ -489,6 +506,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "正泰集团旗下光伏制造，全球光伏组件出货量 Top 10。从硅片到组件全产业链布局，海外市场增长强劲。",
     fundingAmt: "上市公司",
     investors: "正泰集团",
@@ -501,7 +519,7 @@ const COMPANIES = [
     jobs: [
       { title: "工艺工程师", salary: "15-25K", exp: "1-3年", degree: "本科" },
       { title: "海外销售经理", salary: "20-35K", exp: "3-5年", degree: "本科" },
-      { title: "设备工程师", salary: "12-22K", exp: "1-3年", degree: "本科" }
+      { title: "设备工程师", salary: "12-22K", exp: "1-3年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -519,6 +537,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "新一代社交平台，基于兴趣图谱和 AI 匹配。年轻用户占比极高，已提交港交所上市申请。",
     fundingAmt: "超2亿美元",
     investors: "腾讯、米哈游、元生资本",
@@ -531,7 +550,7 @@ const COMPANIES = [
     jobs: [
       { title: "推荐算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "Android开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
-      { title: "数据分析师", salary: "20-38K", exp: "2-5年", degree: "本科" }
+      { title: "数据分析师", salary: "20-38K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -549,6 +568,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: true,
     desc: "全球化 IoT 云平台，已在美国纽交所上市。连接全球超 200 个国家和地区，AI+IoT 开发者生态庞大。",
     fundingAmt: "纽交所上市",
     investors: "NEA、腾讯",
@@ -561,7 +581,7 @@ const COMPANIES = [
     jobs: [
       { title: "嵌入式开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "Java后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
-      { title: "海外产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
+      { title: "海外产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -579,6 +599,7 @@ const COMPANIES = [
     media: false,
     hiring: false,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "集装箱运输智能调度平台。用算法匹配货主与货车，提升集装箱运输效率。港口物流数字化新锐。",
     fundingAmt: "千万级人民币",
     investors: "真格基金、源码资本",
@@ -590,7 +611,7 @@ const COMPANIES = [
     website: "https://www.xiangxin.tech",
     jobs: [
       { title: "Java后端开发", salary: "18-30K", exp: "2-5年", degree: "本科" },
-      { title: "算法工程师", salary: "25-40K", exp: "2-5年", degree: "本科" }
+      { title: "算法工程师", salary: "25-40K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -610,6 +631,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "人形机器人第一股（港股上市），Walker系列人形机器人全球领先。教育/物流/康养多场景落地，研发团队超千人。",
     fundingAmt: "港股IPO",
     investors: "腾讯、启明创投、科大讯飞",
@@ -622,7 +644,7 @@ const COMPANIES = [
     jobs: [
       { title: "运动控制算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "SLAM算法工程师", salary: "30-55K", exp: "2-5年", degree: "本科" },
-      { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年", degree: "本科" }
+      { title: "嵌入式软件工程师", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -638,6 +660,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "协作机器人龙头，已获丰田、比亚迪等头部客户。全球协作机器人出货量前三，柔性制造场景王者。",
     fundingAmt: "超10亿人民币",
     investors: "淡马锡、软银愿景基金、比亚迪",
@@ -650,7 +673,7 @@ const COMPANIES = [
     jobs: [
       { title: "机器人控制算法", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "C++开发工程师", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "海外技术支持", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "海外技术支持", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -668,6 +691,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "AI 药物研发头部玩家，量子物理+AI+云计算驱动新药发现。与辉瑞等国际药企合作，技术壁垒极高。",
     fundingAmt: "超7亿美元",
     investors: "红杉中国、腾讯、谷歌、软银",
@@ -680,7 +704,7 @@ const COMPANIES = [
     jobs: [
       { title: "计算化学研究员", salary: "40-70K", exp: "博士", degree: "本科" },
       { title: "AI算法工程师", salary: "35-60K", exp: "3-5年", degree: "本科" },
-      { title: "Python后端开发", salary: "28-48K", exp: "3-5年", degree: "本科" }
+      { title: "Python后端开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -696,6 +720,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "AI 辅助诊断冠脉/头颈/胸部疾病，已获 NMPA 多张三类证。覆盖全国 2000+ 医院，心脑血管 AI 赛道第一。",
     fundingAmt: "数亿元人民币",
     investors: "红杉中国、华盖资本、远毅资本",
@@ -708,7 +733,7 @@ const COMPANIES = [
     jobs: [
       { title: "医学图像算法", salary: "30-50K", exp: "2-5年", degree: "本科" },
       { title: "Java后端开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
-      { title: "产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -726,6 +751,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "企业级研发管理工具（对标 Jira），已服务小米、浪潮、招商局等。国内研发管理 SaaS 领军， Atlassian 中国替代首选。",
     fundingAmt: "超1亿美元",
     investors: "XVC、顺为资本、源码资本",
@@ -738,7 +764,7 @@ const COMPANIES = [
     jobs: [
       { title: "前端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "Go后端开发", salary: "30-50K", exp: "3-5年", degree: "本科" },
-      { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" }
+      { title: "产品经理", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -754,6 +780,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "企业支出管理平台，整合商旅/采购/费控/支付。已服务数千家中大型企业，新一代企业支付赛道头部。",
     fundingAmt: "超10亿人民币",
     investors: "高瓴创投、腾讯、IDG资本",
@@ -766,7 +793,7 @@ const COMPANIES = [
     jobs: [
       { title: "Java架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
-      { title: "测试开发", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "测试开发", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -784,6 +811,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "中国唯一量产 DRAM 的 IDM 企业。国产存储芯片突破者，国家大基金重注，半导体国产替代核心标的。",
     fundingAmt: "超300亿人民币",
     investors: "大基金二期、合肥产投、兆易创新",
@@ -796,7 +824,7 @@ const COMPANIES = [
     jobs: [
       { title: "IC设计工程师", salary: "40-70K", exp: "3-5年", degree: "本科" },
       { title: "工艺整合工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
-      { title: "设备工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "设备工程师", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -812,6 +840,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "高性能 AI 推理芯片，自研通用 GPU 架构。创始人来自 AMD 全球副总裁，芯片已量产落地。国产 GPU 替代潜力股。",
     fundingAmt: "数亿元人民币",
     investors: "经纬创投、红点中国、五源资本",
@@ -824,7 +853,7 @@ const COMPANIES = [
     jobs: [
       { title: "GPU架构工程师", salary: "50-80K", exp: "5-10年", degree: "本科" },
       { title: "AI编译器开发", salary: "40-65K", exp: "3-5年", degree: "本科" },
-      { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
+      { title: "驱动开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -842,6 +871,7 @@ const COMPANIES = [
     media: false,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "国内顶级 3D 动画制作公司，参与《凡人修仙传》《遮天》等顶级国漫制作。与 Netflix、腾讯视频深度合作，动画工业化标杆。",
     fundingAmt: "数亿元人民币",
     investors: "腾讯、B站、乐游资本",
@@ -854,7 +884,7 @@ const COMPANIES = [
     jobs: [
       { title: "UE5引擎开发", salary: "25-40K", exp: "2-5年", degree: "本科" },
       { title: "3D动画师", salary: "18-30K", exp: "1-3年", degree: "本科" },
-      { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年", degree: "本科" }
+      { title: "技术美术(TA)", salary: "25-45K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -872,6 +902,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "在线素质教育平台，数理思维赛道头号玩家。双减后转型素质教育成功，海外业务增速迅猛。",
     fundingAmt: "超5亿美元",
     investors: "红杉中国、KKR、GGV、快手",
@@ -884,7 +915,7 @@ const COMPANIES = [
     jobs: [
       { title: "后端架构师", salary: "35-55K", exp: "5-10年", degree: "本科" },
       { title: "数据工程师", salary: "28-48K", exp: "3-5年", degree: "本科" },
-      { title: "AI课程设计师", salary: "20-35K", exp: "3-5年", degree: "本科" }
+      { title: "AI课程设计师", salary: "20-35K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -902,6 +933,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "高速吹风机/电动牙刷新国货，用技术降维打击戴森。年营收超 20 亿，产品力极强，出海势头凶猛。",
     fundingAmt: "数亿元人民币",
     investors: "大钲资本、顺为资本",
@@ -914,7 +946,7 @@ const COMPANIES = [
     jobs: [
       { title: "嵌入式开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "电商运营总监", salary: "30-50K", exp: "5-10年", degree: "本科" },
-      { title: "工业设计", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "工业设计", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -932,6 +964,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "长城汽车孵化，动力电池 Top 10。短刀电池技术路线独树一帜，已建多个百GWh基地，科创板冲刺中。",
     fundingAmt: "超200亿人民币",
     investors: "IDG资本、国家绿色发展基金、碧桂园创投",
@@ -944,7 +977,7 @@ const COMPANIES = [
     jobs: [
       { title: "电池研发工程师", salary: "25-45K", exp: "2-5年", degree: "本科" },
       { title: "工艺工程师", salary: "18-30K", exp: "1-3年", degree: "本科" },
-      { title: "MES开发工程师", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "MES开发工程师", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -962,6 +995,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "智能风控与决策分析，服务超万家金融机构和企业。从反欺诈到信用评估，金融科技基础设施级公司。",
     fundingAmt: "超20亿人民币",
     investors: "中投公司、招商局资本、宽带资本",
@@ -974,7 +1008,7 @@ const COMPANIES = [
     jobs: [
       { title: "风控算法工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "Java开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
-      { title: "数据分析师", salary: "20-35K", exp: "2-5年", degree: "本科" }
+      { title: "数据分析师", salary: "20-35K", exp: "2-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -992,6 +1026,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "汽车电子龙头，ADAS/智能驾驶域控制器头部供应商。服务国内外主流车企，智能汽车 Tier1 国产替代标杆。",
     fundingAmt: "科创板上市",
     investors: "一汽、上汽、广汽",
@@ -1004,7 +1039,7 @@ const COMPANIES = [
     jobs: [
       { title: "自动驾驶算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "嵌入式开发", salary: "25-42K", exp: "2-5年", degree: "本科" },
-      { title: "系统工程师", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "系统工程师", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1022,6 +1057,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "社招",
+    bestEmployer: false,
     desc: "内容科技独角兽，用 AI 管理品牌内容资产。服务阿里、联合利华等 200+ 品牌，Martech 赛道头部。",
     fundingAmt: "超10亿人民币",
     investors: "淡马锡、红杉中国、赫斯特资本",
@@ -1034,7 +1070,7 @@ const COMPANIES = [
     jobs: [
       { title: "AI算法工程师", salary: "35-55K", exp: "3-5年", degree: "本科" },
       { title: "前端开发", salary: "25-42K", exp: "3-5年", degree: "本科" },
-      { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
+      { title: "产品经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1052,6 +1088,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "全屋智能家居龙头，小米生态链标杆企业。Zigbee/Thread/Matter 多协议，产品销往 190+ 国家。",
     fundingAmt: "超10亿人民币",
     investors: "顺为资本、凯辉基金、远翼投资",
@@ -1064,7 +1101,7 @@ const COMPANIES = [
     jobs: [
       { title: "嵌入式开发", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "IoT平台开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "海外产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "海外产品经理", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1082,6 +1119,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "全球 AMR 自主移动机器人市占率第一。仓储物流机器人出货超万台，海外营收占比超 50%。",
     fundingAmt: "超8亿美元",
     investors: "GGV、华平投资、英特尔资本",
@@ -1094,7 +1132,7 @@ const COMPANIES = [
     jobs: [
       { title: "路径规划算法", salary: "35-60K", exp: "3-5年", degree: "本科" },
       { title: "C++开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
-      { title: "海外项目经理", salary: "25-40K", exp: "3-5年", degree: "本科" }
+      { title: "海外项目经理", salary: "25-40K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1112,6 +1150,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "全球最大加密货币矿机厂商，ASIC 芯片设计能力全球顶级。旗下蚂蚁矿机市占率超 70%，AI 芯片新方向拓展中。",
     fundingAmt: "超10亿美元",
     investors: "红杉中国、IDG资本、GIC",
@@ -1124,7 +1163,7 @@ const COMPANIES = [
     jobs: [
       { title: "芯片设计工程师", salary: "45-75K", exp: "3-5年", degree: "本科" },
       { title: "AI编译器开发", salary: "35-60K", exp: "3-5年", degree: "本科" },
-      { title: "全栈工程师", salary: "30-50K", exp: "3-5年", degree: "本科" }
+      { title: "全栈工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1142,6 +1181,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: false,
     desc: "AI 视觉赋能智能制造，贾佳亚教授（原腾讯优图）创立。已落地 1000+ 工业视觉场景，精密制造 AI 检测王者。",
     fundingAmt: "超3亿美元",
     investors: "IDG资本、联想创投、基石资本",
@@ -1154,7 +1194,7 @@ const COMPANIES = [
     jobs: [
       { title: "计算机视觉算法", salary: "40-65K", exp: "3-5年", degree: "本科" },
       { title: "C++开发工程师", salary: "30-50K", exp: "3-5年", degree: "本科" },
-      { title: "解决方案架构师", salary: "28-45K", exp: "3-5年", degree: "本科" }
+      { title: "解决方案架构师", salary: "28-45K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1172,6 +1212,7 @@ const COMPANIES = [
     media: true,
     hiring: true,
     recruitment: "校招",
+    bestEmployer: true,
     desc: "女性向游戏绝对王者，《恋与制作人》《闪耀暖暖》等现象级产品。研发实力强，IP 衍生品和海外市场表现优异。",
     fundingAmt: "数亿美元",
     investors: "腾讯、字节跳动（已退出）",
@@ -1184,7 +1225,7 @@ const COMPANIES = [
     jobs: [
       { title: "Unity开发", salary: "28-48K", exp: "3-5年", degree: "本科" },
       { title: "游戏服务器开发", salary: "28-45K", exp: "3-5年", degree: "本科" },
-      { title: "3D角色美术", salary: "22-38K", exp: "3-5年", degree: "本科" }
+      { title: "3D角色美术", salary: "22-38K", exp: "3-5年", degree: "本科" },
       { title: "产品经理", salary: "25-42K", exp: "3-5年", degree: "本科" },
       { title: "前端开发工程师", salary: "22-40K", exp: "2-5年", degree: "本科" },
     ]
@@ -1201,5 +1242,6 @@ const FILTERS = {
   media: ["不限","是","否"],
   hiring: ["不限","是","否"],
   recruitment: ["不限","社招","校招"],
+  bestEmployer: ["不限","是","否"],
   degree: ["不限","大专","本科","硕士","博士"]
 };
