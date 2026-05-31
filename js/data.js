@@ -491,7 +491,6 @@ const COMPANIES = [
     benefits: ["独立开发", "远程", "收入分成"],
     website: "https://baimiaoapp.com",
     jobs: []
-    ]
   },
 
   // ===== 能源环保 =====
