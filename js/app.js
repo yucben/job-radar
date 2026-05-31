@@ -288,18 +288,18 @@ function renderResults(companies) {
           <span class="tag">${c.industry}</span>
           <span class="tag tag-success">${c.funding}</span>
           ${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join('')}
-          ${c.recruitment === '校招' ? '<span class="tag" style="background:#fef3c7;color:#92400e">🎓校招</span>' : ''}
-          ${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆最佳雇主</span>' : ''}
+          ${c.recruitment === '校招' ? '<span class="tag tag-warn" style="background:#fff8f1;color:#b45309">🎓校招</span>' : ''}
+          ${c.bestEmployer ? '<span class="tag tag-pink">🏆最佳雇主</span>' : ''}
         </div>
         <div class="card-info">📍 ${c.location} · 👥 ${c.employees}</div>
         <div class="card-info"><strong>投资人:</strong> ${c.investors}</div>
-        ${c.techStack ? `<div class="card-info" style="margin-top:4px">${c.techStack.slice(0,5).map(t => `<span class="tag tag-gray" style="font-size:.7rem">${t}</span>`).join(' ')}${c.techStack.length > 5 ? ` <span style="font-size:.7rem;color:#94a3b8">+${c.techStack.length-5}</span>` : ''}</div>` : ''}
+        ${c.techStack ? `<div class="card-tech">${c.techStack.slice(0,5).map(t => `<span class="tag tag-gray">${t}</span>`).join(' ')}${c.techStack.length > 5 ? ` <span style="font-size:.7rem;color:var(--text-muted)">+${c.techStack.length-5}</span>` : ''}</div>` : ''}
         <div class="card-jobs">
           ${c.jobs.slice(0, 3).map(j => 
             `<span class="job-badge">${j.title} <span class="salary">${j.salary}</span> · ${j.degree||'本科'}</span>`
           ).join('')}
-          ${c.jobs.length > 3 ? `<span class="job-badge" style="background:#f1f5f9;color:#64748b">+${c.jobs.length - 3} 更多</span>` : ''}
-          ${c.jobs.length === 0 ? '<span style="font-size:.8rem;color:#94a3b8">暂无在招职位</span>' : ''}
+          ${c.jobs.length > 3 ? `<span class="job-badge" style="background:var(--bg-subtle);color:var(--text-tertiary)">+${c.jobs.length - 3} 更多</span>` : ''}
+          ${c.jobs.length === 0 ? '<span style="font-size:.8rem;color:var(--text-muted)">暂无在招职位</span>' : ''}
         </div>
       </div>
     `).join('');
@@ -317,7 +317,7 @@ function renderResults(companies) {
         <td>${c.location}</td>
         <td>${c.year}年</td>
         <td>${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join(' ') || '—'}</td>
-        <td>${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆</span>' : '—'}</td>
+        <td>${c.bestEmployer ? '<span class="tag tag-pink">🏆</span>' : '—'}</td>
         <td>${c.jobs.length} 个职位${c.jobs.length > 0 ? ` · ${c.jobs[0].salary}` : ''}</td>
       </tr>
     `).join('');
@@ -357,7 +357,7 @@ function showDetail(id) {
         <div class="modal-meta-item"><span class="label">城市</span><span class="value">${(c.cities||[c.location]).join(' · ')}</span></div>
         <div class="modal-meta-item"><span class="label">优势</span><span class="value">${c.advantage.map(a => `<span class="tag tag-warn">${a}</span>`).join(' ') || '—'}</span></div>
         <div class="modal-meta-item"><span class="label">招聘</span><span class="value"><span class="tag tag-success">${c.recruitment}</span></span></div>
-        <div class="modal-meta-item"><span class="label">最佳雇主</span><span class="value">${c.bestEmployer ? '<span class="tag" style="background:#fce7f3;color:#be185d">🏆 2025最佳雇主</span>' : '—'}</span></div>
+        <div class="modal-meta-item"><span class="label">最佳雇主</span><span class="value">${c.bestEmployer ? '<span class="tag tag-pink">🏆 2025最佳雇主</span>' : '—'}</span></div>
       </div>
     </div>
     
@@ -374,7 +374,7 @@ function showDetail(id) {
     <div class="modal-section">
       <h3>福利待遇</h3>
       <div style="display:flex;flex-wrap:wrap;gap:6px">
-        ${c.benefits.map(b => `<span class="tag" style="background:#d1fae5;color:#065f46">✅ ${b}</span>`).join('')}
+        ${c.benefits.map(b => `<span class="benefit-tag">✅ ${b}</span>`).join('')}
       </div>
     </div>
     ` : ''}
@@ -393,10 +393,10 @@ function showDetail(id) {
     </div>
     ` : ''}
 
-    <div class="modal-section" style="background:#fef2f2;border-radius:8px;padding:16px;border:1px solid #fecaca">
-      <h3 style="color:#dc2626">⚠️ 避坑查询 — 搜负面评价</h3>
-      <p style="font-size:.85rem;color:#991b1b;margin-bottom:10px">坏名声通常不是空穴来风。投简历前搜一圈：</p>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">
+    <div class="modal-section warn-section">
+      <h3>⚠️ 避坑查询 — 搜负面评价</h3>
+      <p>坏名声通常不是空穴来风。投简历前搜一圈：</p>
+      <div class="warn-links">
         <a href="https://maimai.cn/search?q=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+裁员" target="_blank" class="warn-link" rel="noopener">脉脉</a>
         <a href="https://www.zhihu.com/search?type=content&q=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+避雷" target="_blank" class="warn-link" rel="noopener">知乎</a>
         <a href="https://www.nowcoder.com/search?type=post&query=${encodeURIComponent(c.name.replace(/\(.*\)/,'').trim())}+坑" target="_blank" class="warn-link" rel="noopener">牛客</a>
